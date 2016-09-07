@@ -1,3 +1,5 @@
+/* global gapi */
+
 const client_id = '447838384773-9n5pf96vipeuedm8ls2und2uu0ekteqt.apps.googleusercontent.com';
 const apiKey = 'SqgxaJRRDVB4s3x9zEbkaR4B';
 
@@ -19,11 +21,9 @@ function setApiKey () {
 
 function initApi() {
 	return gapi.auth2.init({client_id, scope})
-		//todo make sign-in happen from user triggered action to get around pop-up blocker
-		.then(() => gapi.auth2.getAuthInstance().signIn())
-		.then(() => console.log('Google API ready'));
 }
 
+// do this immediately so that log in is sync and Google login pop up isn't blocked
 export default () => loadAuth2()
-		.then(setApiKey)
-		.then(initApi);
+	.then(setApiKey)
+	.then(initApi);
