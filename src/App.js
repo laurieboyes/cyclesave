@@ -5,13 +5,14 @@ import './App.css';
 
 const App = React.createClass({
 
-	getInitialState: () => {
-		return initGoogleApi()
-			.then(() => ({}));
+	componentDidMount: function() {
+		initGoogleApi()
+			.then(() => console.log('google API initialised'));
 	},
 
 	signInToGoogle: () => {
-		return signInToGoogle();
+		signInToGoogle()
+			.then(() => console.log('signed into google'));
 	},
 
 	render: function () {

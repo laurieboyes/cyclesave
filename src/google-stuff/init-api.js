@@ -19,11 +19,14 @@ function setApiKey () {
 	return Promise.resolve()
 }
 
-function initApi() {
-	return gapi.auth2.init({client_id, scope})
+function initApi () {
+	// todo cannot for the life of me work out why this fails without the then.
+	// Something to do with the way the google api client implements its promise returning stuff ???
+	return gapi.auth2.init({client_id, scope}).then(() => {});
 }
 
 // do this immediately so that log in is sync and Google login pop up isn't blocked
 export default () => loadAuth2()
 	.then(setApiKey)
-	.then(initApi);
+	.then(initApi)
+	.catch(console.error);
