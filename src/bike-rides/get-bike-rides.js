@@ -44,7 +44,4 @@ export default (fromDate, toDate) => {
 				};
 			});
 		})
-		.then(stuff => {
-			console.log('stuff', stuff);
-		})
 }
