@@ -8,7 +8,7 @@ export default class BikeRideList extends React.Component {
 	}
 
 	renderLocation (lat, lng) {
-		return `lat:${lat} lng:${lng}`;
+		return `${lat},${lng}`;
 	}
 
 	nanosToMinutesString (nanos) {
@@ -17,6 +17,10 @@ export default class BikeRideList extends React.Component {
 
 	formatStartTime (date) {
 		return moment(date).format('YYYY-MM-DD HH:mm');
+	}
+
+	getTflLink (start, end) {
+		return `https://api.tfl.gov.uk/journey/journeyresults/${start.lat},${start.lng}/to/${end.lat},${end.lng}`;
 	}
 
 	render () {
@@ -40,6 +44,7 @@ export default class BikeRideList extends React.Component {
 								<td>{this.renderLocation(ride.endLatLang.lat, ride.endLatLang.lng)}</td>
 								<td>{this.formatStartTime(ride.startTime)}</td>
 								<td>{this.nanosToMinutesString(ride.durationMs)}</td>
+								<td><a href={this.getTflLink(ride.startLatLang,ride.endLatLang)}>TFL</a></td>
 							</tr>
 						)
 					})}
