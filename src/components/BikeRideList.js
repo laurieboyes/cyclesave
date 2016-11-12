@@ -10,6 +10,10 @@ export default class BikeRideList extends React.Component {
 		return `lat:${lat} lng:${lng}`;
 	}
 
+	nanosToMinutesString (nanos) {
+		return `${parseInt(nanos / 1000 / 60)} mins`
+	}
+
 	render () {
 		return (
 			<div className='bike-ride-list'>
@@ -30,7 +34,7 @@ export default class BikeRideList extends React.Component {
 								<td>{this.renderLocation(ride.startLatLang.lat, ride.startLatLang.lng)}</td>
 								<td>{this.renderLocation(ride.endLatLang.lat, ride.endLatLang.lng)}</td>
 								<td>{ride.startTime.toISOString()}</td>
-								<td>{ride.durationMs}</td>
+								<td>{this.nanosToMinutesString(ride.durationMs)}</td>
 							</tr>
 						)
 					})}
