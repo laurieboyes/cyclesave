@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 export default class BikeRideList extends React.Component {
 
@@ -12,6 +13,10 @@ export default class BikeRideList extends React.Component {
 
 	nanosToMinutesString (nanos) {
 		return `${parseInt(nanos / 1000 / 60)} mins`
+	}
+
+	formatStartTime (date) {
+		return moment(date).format('YYYY-MM-DD HH:mm');
 	}
 
 	render () {
@@ -33,7 +38,7 @@ export default class BikeRideList extends React.Component {
 							<tr key={this.getBikeRideKey(ride)}>
 								<td>{this.renderLocation(ride.startLatLang.lat, ride.startLatLang.lng)}</td>
 								<td>{this.renderLocation(ride.endLatLang.lat, ride.endLatLang.lng)}</td>
-								<td>{ride.startTime.toISOString()}</td>
+								<td>{this.formatStartTime(ride.startTime)}</td>
 								<td>{this.nanosToMinutesString(ride.durationMs)}</td>
 							</tr>
 						)
