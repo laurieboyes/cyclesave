@@ -4,6 +4,7 @@ import signInToGoogle from './google-stuff/sign-in';
 import getBikeRides from './bike-rides/get-bike-rides';
 import './App.css';
 import BikeRideList from './components/BikeRideList.js'
+import TflJourney from './tfl/TflJourney'
 
 export default class App extends React.Component {
 
@@ -24,10 +25,17 @@ export default class App extends React.Component {
 		this.setState({status: 'loading'});
 		return signInToGoogle()
 			.then(() => getBikeRides(new Date('2016-08-01'), new Date('2016-09-01')))
+			.then(bikeRides => {
+				return Promise.all(bikeRides.map(bikeRide => {
+					const journey = new TflJourney(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime);
+					return journey.fetchInfo()
+						.then(() => Object.assign({}, bikeRide, {journey}));
+				}))
+			})
 			.then(bikeRides => this.setState({
-					status: 'loaded',
-					bikeRides
-				}));
+				status: 'loaded',
+				bikeRides
+			}))
 	}
 
 	renderBikeRides () {
