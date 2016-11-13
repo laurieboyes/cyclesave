@@ -19,12 +19,17 @@ export default class BikeRideList extends React.Component {
 		return moment(date).format('YYYY-MM-DD HH:mm');
 	}
 
-	formatJourneyLegSummaries (summaries) {
-		return (
-			<ol>
-				{summaries.map(s => (<li>{s}</li>))}
-			</ol>
-		);
+	formatJourneyLegSummaries (journey) {
+		if(journey.isFetched) {
+			return (
+				<ol>
+					{journey.getLegSummaries().map(s => (<li>{s}</li>))}
+				</ol>
+			);
+		} else {
+			return 'loading...'
+		}
+
 	}
 
 	render () {
@@ -49,7 +54,7 @@ export default class BikeRideList extends React.Component {
 								<td>{this.renderLocation(ride.endLatLang.lat, ride.endLatLang.lng)}</td>
 								<td>{this.formatStartTime(ride.startTime)}</td>
 								<td>{this.nanosToMinutesString(ride.durationMs)}</td>
-								<td>{ride.journey && this.formatJourneyLegSummaries(ride.journey.getLegSummaries())}</td>
+								<td>{this.formatJourneyLegSummaries(ride.journey)}</td>
 							</tr>
 						)
 					})}

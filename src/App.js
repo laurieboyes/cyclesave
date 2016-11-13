@@ -25,17 +25,16 @@ export default class App extends React.Component {
 		this.setState({status: 'loading'});
 		return signInToGoogle()
 			.then(() => getBikeRides(new Date('2016-08-01'), new Date('2016-09-01')))
-			.then(bikeRides => {
-				return Promise.all(bikeRides.map(bikeRide => {
-					const journey = new TflJourney(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime);
-					return journey.fetchInfo()
-						.then(() => Object.assign({}, bikeRide, {journey}));
-				}))
-			})
+			.then(bikeRides => bikeRides.map(bikeRide => Object.assign({}, bikeRide, {
+				journey: new TflJourney(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime)
+			})))
 			.then(bikeRides => this.setState({
 				status: 'loaded',
 				bikeRides
 			}))
+			.then(() => {
+				this.state.bikeRides.forEach(bikeRide => bikeRide.journey.fetchInfo().then(() => this.forceUpdate()));
+			})
 	}
 
 	renderBikeRides () {
