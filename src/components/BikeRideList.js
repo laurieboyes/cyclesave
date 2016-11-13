@@ -23,7 +23,7 @@ export default class BikeRideList extends React.Component {
 		if(journey.isFetched) {
 			return (
 				<ol>
-					{journey.getLegSummaries().map(s => (<li>{s}</li>))}
+					{journey.getLegSummaries().map((s, i) => (<li key={i}>{s}</li>))}
 				</ol>
 			);
 		} else {
