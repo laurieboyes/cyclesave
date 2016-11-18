@@ -1,0 +1,503 @@
+{
+  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Journey, Tfl.Api.Presentation.Entities",
+  "startDateTime": "2016-11-18T17:36:00",
+  "duration": 47,
+  "arrivalDateTime": "2016-11-18T18:23:00",
+  "legs": [
+	{
+	  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+	  "duration": 3,
+	  "instruction": {
+		"$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+		"summary": "Walk to Forest Hill Station",
+		"detailed": "Walk to Forest Hill Station",
+		"steps": [
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+			"description": "Perry Vale for 22 metres",
+			"turnDirection": "STRAIGHT",
+			"streetName": "Perry Vale",
+			"distance": 22,
+			"cumulativeDistance": 22,
+			"skyDirection": 223,
+			"skyDirectionDescription": "SouthWest",
+			"cumulativeTravelTime": 19,
+			"latitude": 51.43886877023,
+			"longitude": -0.052857971790000007,
+			"pathAttribute": {
+			  "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+			},
+			"descriptionHeading": "Continue along ",
+			"trackType": "None"
+		  }
+		]
+	  },
+	  "obstacles": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+		  "type": "STAIRS",
+		  "incline": "UP",
+		  "stopId": 1001112,
+		  "position": "IDEST"
+		}
+	  ],
+	  "departureTime": "2016-11-18T17:36:00",
+	  "arrivalTime": "2016-11-18T17:39:00",
+	  "departurePoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"platformName": "",
+		"icsCode": "99999997",
+		"commonName": "20 Perry Vale, Forest Hill",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.43924213653,
+		"lon": -0.05259748169
+	  },
+	  "arrivalPoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "910GFORESTH",
+		"platformName": "",
+		"icsCode": "1001112",
+		"commonName": "Forest Hill Rail Station",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.438997206639996,
+		"lon": -0.05301078626
+	  },
+	  "path": {
+		"$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+		"lineString": "[[51.43924213653, -0.05259748169],[51.43910193791, -0.0528192776],[51.43921311818, -0.05301599318],[51.43921311818, -0.05301599318],[51.43910193791, -0.0528192776],[51.43898535407, -0.05283862475],[51.43899720664, -0.05301078626]]",
+		"stopPoints": [],
+		"elevation": []
+	  },
+	  "routeOptions": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+		  "name": "",
+		  "directions": [
+			""
+		  ]
+		}
+	  ],
+	  "mode": {
+		"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+		"id": "walking",
+		"name": "walking",
+		"type": "Mode"
+	  },
+	  "disruptions": [],
+	  "plannedWorks": [],
+	  "distance": 22,
+	  "isDisrupted": false,
+	  "hasFixedLocations": true
+	},
+	{
+	  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+	  "duration": 8,
+	  "instruction": {
+		"$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+		"summary": "London Overground to Crystal Palace Rail Station",
+		"detailed": "London Overground towards Crystal Palace",
+		"steps": []
+	  },
+	  "obstacles": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+		  "type": "STAIRS",
+		  "incline": "UP",
+		  "stopId": 1001078,
+		  "position": "AFTER"
+		},
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+		  "type": "LIFT",
+		  "incline": "DOWN",
+		  "stopId": 1001078,
+		  "position": "AFTER"
+		}
+	  ],
+	  "departureTime": "2016-11-18T17:39:00",
+	  "arrivalTime": "2016-11-18T17:47:00",
+	  "departurePoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "910GFORESTH",
+		"platformName": "",
+		"icsCode": "1001112",
+		"commonName": "Forest Hill Rail Station",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.438997206639996,
+		"lon": -0.05301078626
+	  },
+	  "arrivalPoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "910GCRYSTLP",
+		"platformName": "",
+		"icsCode": "1001078",
+		"commonName": "Crystal Palace Rail Station",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.41754899621,
+		"lon": -0.07201493823
+	  },
+	  "path": {
+		"$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+		"lineString": "[[51.43900738717, -0.05308229734],[51.43840745017, -0.05323730652],[51.43750173759, -0.05339092332],[51.43678282817, -0.05342148753],[51.43607194991, -0.05339415752],[51.43508933134, -0.05324889229],[51.43411426596, -0.05301698798],[51.43320401541, -0.05289743275],[51.43200882791, -0.05294825012],[51.4305454817, -0.05309678122],[51.42979373023, -0.05331575529],[51.429070131, -0.05360545376],[51.42767828011, -0.05426878234],[51.42767828011, -0.05426878234],[51.42582223339, -0.05513878157],[51.42407656405, -0.0556156531],[51.42296773452, -0.05599354387],[51.42218122213, -0.0562858231],[51.42159360151, -0.05664157122],[51.42099842297, -0.05708392934],[51.42066289569, -0.05745773454],[51.42024958567, -0.05802180924],[51.41912056888, -0.05989624728],[51.41819958828, -0.0613015592],[51.41785957652, -0.06194876025],[51.41758294137, -0.06262203585],[51.41734367308, -0.06338001563],[51.41712474665, -0.06428094699],[51.41693467072, -0.06529570608],[51.41680677977, -0.06626468688],[51.41681181841, -0.06820601735],[51.41686835699, -0.06890834265],[51.41695208755, -0.06962390586],[51.41706182665, -0.0702808488],[51.41722690044, -0.07102175671],[51.41740734132, -0.07160382139],[51.41754899621, -0.07201493823]]",
+		"stopPoints": [
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "910GSYDENHM",
+			"name": "Sydenham Rail Station",
+			"uri": "/StopPoint/910GSYDENHM",
+			"type": "StopPoint"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "910GCRYSTLP",
+			"name": "Crystal Palace Rail Station",
+			"uri": "/StopPoint/910GCRYSTLP",
+			"type": "StopPoint"
+		  }
+		],
+		"elevation": []
+	  },
+	  "routeOptions": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+		  "name": "London Overground",
+		  "directions": [
+			"Crystal Palace Rail Station"
+		  ],
+		  "lineIdentifier": {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "london-overground",
+			"name": "London Overground",
+			"uri": "/Line/london-overground",
+			"type": "Line"
+		  }
+		}
+	  ],
+	  "mode": {
+		"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+		"id": "overground",
+		"name": "overground",
+		"type": "Mode"
+	  },
+	  "disruptions": [],
+	  "plannedWorks": [],
+	  "isDisrupted": false,
+	  "hasFixedLocations": true
+	},
+	{
+	  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+	  "duration": 9,
+	  "instruction": {
+		"$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+		"summary": "Southern to Tulse Hill",
+		"detailed": "Southern towards South Bermondsey",
+		"steps": []
+	  },
+	  "obstacles": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+		  "type": "STAIRS",
+		  "incline": "DOWN",
+		  "stopId": 1001298,
+		  "position": "AFTER"
+		},
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+		  "type": "WALKWAY",
+		  "incline": "LEVEL",
+		  "stopId": 1001298,
+		  "position": "AFTER"
+		},
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+		  "type": "WALKWAY",
+		  "incline": "LEVEL",
+		  "stopId": 1001298,
+		  "position": "AFTER"
+		}
+	  ],
+	  "departureTime": "2016-11-18T17:55:00",
+	  "arrivalTime": "2016-11-18T18:04:00",
+	  "departurePoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "490G01078M",
+		"platformName": "",
+		"icsCode": "1001078",
+		"commonName": "Crystal Palace Station",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.417447305050004,
+		"lon": -0.07239314897
+	  },
+	  "arrivalPoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "490G01298G",
+		"platformName": "",
+		"icsCode": "1001298",
+		"commonName": "Tulse Hill Station",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.44005299665,
+		"lon": -0.10480975412
+	  },
+	  "path": {
+		"$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+		"lineString": "[[51.41747331896, -0.07233452657],[51.41794865357, -0.07280352145],[51.41854884369, -0.07375627481],[51.42099752618, -0.0777525041],[51.42158892621, -0.07872013602],[51.42180103537, -0.07904205752],[51.42271401713, -0.08042775364],[51.42351749764, -0.08171740231],[51.42393506435, -0.08250542097],[51.42433770865, -0.08348107196],[51.42445118805, -0.08382154427],[51.42445118805, -0.08382154427],[51.42621405856, -0.08879683476],[51.42631900492, -0.08916645932],[51.42638636355, -0.08943695991],[51.42676049874, -0.09087422746],[51.42704137908, -0.09266064136],[51.42728428581, -0.09377255961],[51.4275778302, -0.09468099141],[51.42794209255, -0.09551456812],[51.42837567345, -0.09618703768],[51.429723426, -0.09833204191],[51.43027065931, -0.09935949544],[51.43078450023, -0.10054660571],[51.43112455632, -0.10155392452],[51.43135397128, -0.10239320648],[51.43147065449, -0.10293505262],[51.43163273366, -0.10350379432],[51.43171686999, -0.10370171994],[51.43171686999, -0.10370171994],[51.43184779974, -0.10401280055],[51.43212693265, -0.10459109251],[51.43251274039, -0.1050930443],[51.43300615346, -0.10557616625],[51.43362630697, -0.10611160469],[51.434253819, -0.10654604269],[51.43547265963, -0.10740206158],[51.43613495312, -0.10776315778],[51.43665044194, -0.10794328634],[51.43711844429, -0.1079671117],[51.43751316079, -0.10790763636],[51.43774426054, -0.10773981503],[51.43807994962, -0.10736623134],[51.43895701441, -0.10599182771],[51.44000643601, -0.10471095837]]",
+		"stopPoints": [
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G01116S",
+			"name": "Gipsy Hill Station",
+			"uri": "/StopPoint/490G01116S",
+			"type": "StopPoint"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G01331T",
+			"name": "West Norwood Station",
+			"uri": "/StopPoint/490G01331T",
+			"type": "StopPoint"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G01298G",
+			"name": "Tulse Hill Station",
+			"uri": "/StopPoint/490G01298G",
+			"type": "StopPoint"
+		  }
+		],
+		"elevation": []
+	  },
+	  "routeOptions": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+		  "name": "Southern",
+		  "directions": [
+			"South Bermondsey Rail Station"
+		  ]
+		}
+	  ],
+	  "mode": {
+		"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+		"id": "national-rail",
+		"name": "national-rail",
+		"type": "Mode"
+	  },
+	  "disruptions": [],
+	  "plannedWorks": [],
+	  "isDisrupted": false,
+	  "hasFixedLocations": true
+	},
+	{
+	  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+	  "duration": 12,
+	  "instruction": {
+		"$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+		"summary": "2 bus or 432 bus to Craignair Road",
+		"detailed": "2 bus towards Marylebone or 432 bus towards Brixton",
+		"steps": []
+	  },
+	  "obstacles": [],
+	  "departureTime": "2016-11-18T18:08:00",
+	  "arrivalTime": "2016-11-18T18:20:00",
+	  "departurePoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "490G01298G",
+		"platformName": "E",
+		"stopLetter": "E",
+		"icsCode": "1001298",
+		"commonName": "Tulse Hill Station",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.440179642829996,
+		"lon": -0.10763915881
+	  },
+	  "arrivalPoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "490G00005366",
+		"platformName": "",
+		"stopLetter": "K",
+		"icsCode": "1005366",
+		"commonName": "Craignair Road",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.44897307667,
+		"lon": -0.11313307679000001
+	  },
+	  "path": {
+		"$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+		"lineString": "[[51.44032319706, -0.10761883604],[51.44034627715, -0.10793444273],[51.44035804897, -0.10810662573],[51.44040026128, -0.10849338808],[51.44061895732, -0.10867141221],[51.44124477449, -0.10844410649],[51.44124477449, -0.10844410649],[51.4412715024, -0.10842861274],[51.44161415536, -0.10848640245],[51.44166969953, -0.10858483427],[51.44196330466, -0.10894683415],[51.44266757008, -0.10968040396],[51.44276804656, -0.10977698416],[51.44296830367, -0.10992700471],[51.44296830367, -0.10992700471],[51.44317777911, -0.11009103598],[51.44336006252, -0.11024180117],[51.44354257756, -0.11040694811],[51.44375205235, -0.11057098358],[51.44420764317, -0.11094071782],[51.44426249011, -0.11099601581],[51.44449040088, -0.11118807657],[51.44483722315, -0.11150474782],[51.44538290939, -0.11188517417],[51.44538290939, -0.11188517417],[51.44695612827, -0.11297157361],[51.44710060945, -0.11300879075],[51.4473264336, -0.11307143728],[51.44741722624, -0.11312525964],[51.44766908437, -0.11312926826],[51.44792094249, -0.1131332769],[51.44838801754, -0.11309962981],[51.44875623925, -0.11307005742],[51.44897145615, -0.11303240082]]",
+		"stopPoints": [
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G000571",
+			"name": "Hardel Rise",
+			"uri": "/StopPoint/490G000571",
+			"type": "StopPoint"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G00008194",
+			"name": "High Trees",
+			"uri": "/StopPoint/490G00008194",
+			"type": "StopPoint"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G00013950",
+			"name": "Upper Tulse Hill",
+			"uri": "/StopPoint/490G00013950",
+			"type": "StopPoint"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "490G00005366",
+			"name": "Craignair Road",
+			"uri": "/StopPoint/490G00005366",
+			"type": "StopPoint"
+		  }
+		],
+		"elevation": []
+	  },
+	  "routeOptions": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+		  "name": "2",
+		  "directions": [
+			"Marylebone"
+		  ],
+		  "lineIdentifier": {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "2",
+			"name": "2",
+			"uri": "/Line/2",
+			"type": "Line"
+		  }
+		},
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+		  "name": "432",
+		  "directions": [
+			"Brixton"
+		  ],
+		  "lineIdentifier": {
+			"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+			"id": "432",
+			"name": "432",
+			"uri": "/Line/432",
+			"type": "Line"
+		  }
+		}
+	  ],
+	  "mode": {
+		"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+		"id": "bus",
+		"name": "bus",
+		"type": "Mode"
+	  },
+	  "disruptions": [],
+	  "plannedWorks": [],
+	  "isDisrupted": false,
+	  "hasFixedLocations": true
+	},
+	{
+	  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+	  "duration": 3,
+	  "instruction": {
+		"$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+		"summary": "Walk to Claverdale Road, Tulse Hill",
+		"detailed": "Walk to Claverdale Road, Tulse Hill",
+		"steps": [
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+			"description": "Tulse Hill for 117 metres",
+			"turnDirection": "STRAIGHT",
+			"streetName": "Tulse Hill",
+			"distance": 117,
+			"cumulativeDistance": 117,
+			"skyDirection": 184,
+			"skyDirectionDescription": "South",
+			"cumulativeTravelTime": 103,
+			"latitude": 51.448971456150005,
+			"longitude": -0.11303240081999999,
+			"pathAttribute": {
+			  "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+			},
+			"descriptionHeading": "Continue along ",
+			"trackType": "None"
+		  },
+		  {
+			"$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+			"description": "on to Claverdale Road, continue for 49 metres",
+			"turnDirection": "RIGHT",
+			"streetName": "Claverdale Road",
+			"distance": 49,
+			"cumulativeDistance": 166,
+			"skyDirection": 265,
+			"skyDirectionDescription": "North",
+			"cumulativeTravelTime": 144,
+			"latitude": 51.44792094248999,
+			"longitude": -0.1131332769,
+			"pathAttribute": {
+			  "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+			},
+			"descriptionHeading": "Turn right",
+			"trackType": "None"
+		  }
+		]
+	  },
+	  "obstacles": [],
+	  "departureTime": "2016-11-18T18:20:00",
+	  "arrivalTime": "2016-11-18T18:23:00",
+	  "departurePoint": {
+		"$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+		"naptanId": "490G00005366",
+		"platformName": "",
+		"stopLetter": "K",
+		"icsCode": "1005366",
+		"commonName": "Craignair Road",
+		"placeType": "StopPoint",
+		"additionalProperties": [],
+		"lat": 51.44897307667,
+		"lon": -0.11313307679000001
+	  },
+	  "arrivalPoint": {
+		"$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+		"commonName": "Claverdale Road, Tulse Hill",
+		"placeType": "StopPoint",
+		"lat": 51.44789610551,
+		"lon": -0.11382509213999999
+	  },
+	  "path": {
+		"$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+		"lineString": "[[51.44897307667, -0.11313307679],[51.44897145615, -0.11303240082],[51.44875623925, -0.11307005742],[51.44838801754, -0.11309962981],[51.44792094249, -0.1131332769],[51.44789610551, -0.11382509214]]",
+		"stopPoints": [],
+		"elevation": []
+	  },
+	  "routeOptions": [
+		{
+		  "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+		  "name": "",
+		  "directions": [
+			""
+		  ]
+		}
+	  ],
+	  "mode": {
+		"$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+		"id": "walking",
+		"name": "walking",
+		"type": "Mode"
+	  },
+	  "disruptions": [],
+	  "plannedWorks": [],
+	  "distance": 166,
+	  "isDisrupted": false,
+	  "hasFixedLocations": false
+	}
+  ]
+}
