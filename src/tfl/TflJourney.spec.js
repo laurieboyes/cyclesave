@@ -19,10 +19,14 @@ describe('Making a TflJourney from the raw data', () => {
 				type: 'walking'
 			},
 			{
-				type: 'overground'
+				type: 'overground',
+				fromNaptanId: '910GFORESTH',
+				toNaptanId: '910GCRYSTLP'
 			},
 			{
-				type: 'national-rail'
+				type: 'national-rail',
+				fromNaptanId: '490G01078M',
+				toNaptanId: '490G01298G'
 			},
 			{
 				type: 'bus'
