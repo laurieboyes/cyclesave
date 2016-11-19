@@ -48,4 +48,15 @@ describe('Getting journey costs', () => {
 
 			});
 	})
+
+	it('should return NaN when there\'s part of the journey we can\'t cost', () => {
+		return require('./get-journey-cost').default(
+			[
+				{"type": "walking"},
+				{"type": "bus"},
+				{"type": "walking"},
+				{"type": "skateboarding"}
+			]
+		).then(res => expect(res).toEqual(NaN));
+	});
 });

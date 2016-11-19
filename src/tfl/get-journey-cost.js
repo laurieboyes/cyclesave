@@ -8,9 +8,10 @@ function getLegCost (leg) {
 			return fetchTubeAndOvergroundFare(leg.fromNaptanId, leg.toNaptanId);
 		case 'bus':
 			return Promise.resolve(1.5);
-			break;
-		default:
+		case 'walking':
 			return Promise.resolve(0);
+		default:
+			return Promise.resolve(NaN);
 	}
 }
 
