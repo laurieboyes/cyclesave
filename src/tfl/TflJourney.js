@@ -24,6 +24,7 @@ export default class TflJourney {
 	}
 
 	fetchCost () {
-		return getJourneyCost(this.legs);
+		getJourneyCost(this.legs)
+			.then(cost => this.cost = cost);
 	}
 }

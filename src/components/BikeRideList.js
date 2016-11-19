@@ -28,6 +28,16 @@ export default class BikeRideList extends React.Component {
 
 	}
 
+	renderJourneyCost (cost) {
+		if(isNaN(cost)) {
+			return '??? uncostable legs';
+		} else if(typeof cost === 'undefined') {
+			return 'loading cost...'
+		} else {
+			return '£' + cost.toFixed(2);
+		}
+	}
+
 	renderJourneyTable (journeyPlan) {
 
 		if (journeyPlan.isFetched) {
@@ -37,7 +47,7 @@ export default class BikeRideList extends React.Component {
 					{journeyPlan.getJourneys().map((journey, i) => (
 						<tr key={i}>
 							<td>{this.formatJourneyLegSummaries(journey.getLegSummaries())}</td>
-							<td>£££</td>
+							<td>{this.renderJourneyCost(journey.cost)}</td>
 						</tr>
 					))}
 					</tbody>
