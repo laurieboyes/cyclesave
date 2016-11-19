@@ -32,13 +32,8 @@ export default class BikeRideList extends React.Component {
 
 	}
 
-	formatJourneyLegs (journey) {
-		if(journey.isFetched) {
-			return JSON.stringify(journey.getJourneyLegs(), null, 3);
-		} else {
-			return 'loading...'
-		}
-
+	consoleLogTheJourneyStuff (ride) {
+		console.log(ride.journeyPlans.getJourneyLegs());
 	}
 
 	render () {
@@ -53,7 +48,7 @@ export default class BikeRideList extends React.Component {
 						<th>Start time</th>
 						<th>Duration</th>
 						<th>TFL Journey</th>
-						<th>Legs</th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
@@ -65,7 +60,7 @@ export default class BikeRideList extends React.Component {
 								<td>{this.formatStartTime(ride.startTime)}</td>
 								<td>{this.nanosToMinutesString(ride.durationMs)}</td>
 								<td>{this.formatJourneyLegSummaries(ride.journeyPlans)}</td>
-								<td>{this.formatJourneyLegs(ride.journeyPlans)}</td>
+								<td><button onClick={() => this.consoleLogTheJourneyStuff(ride)}>Show stuff</button></td>
 							</tr>
 						)
 					})}

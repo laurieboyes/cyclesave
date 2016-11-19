@@ -1,5 +1,4 @@
-import moment from 'moment';
-import { json as fetchResJson } from 'fetchres';
+import { fetchJourneyPlan } from './tfl-client'
 import TflJourney from './TflJourney';
 
 export default class TflJourneyPlan {
@@ -11,8 +10,7 @@ export default class TflJourneyPlan {
 	}
 
 	fetchPlan () {
-		return fetch(`https://api.tfl.gov.uk/journey/journeyresults/${this.start.lat},${this.start.lng}/to/${this.end.lat},${this.end.lng}?time=${moment(this.startTime).format('HHmm')}`)
-			.then(fetchResJson)
+		return fetchJourneyPlan(this.start, this.end, this.startTime)
 			.then(stuff => {
 				this.isFetched = true;
 				this.rawJourneys = stuff.journeys;
