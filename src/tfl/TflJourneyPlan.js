@@ -15,7 +15,6 @@ export default class TflJourneyPlan {
 				this.isFetched = true;
 				this.rawJourneys = stuff.journeys;
 				this.journeys = stuff.journeys.map(rawJourney => new TflJourney(rawJourney));
-				console.log('this.journeys A', this.journeys);
 			})
 			.catch(err => {
 				console.error(err);

@@ -31,6 +31,24 @@ function mergeMergeableLegs (legs) {
 					return legStack.concat(Object.assign(deepCopy(legStack.pop()), {
 						toNaptanId: leg.toNaptanId
 					}));
+				} else {
+					return legStack.concat(leg);
+				}
+			case 'bus':
+				const stackCopy = [...legStack];
+				let prevLeg = stackCopy.pop();
+				while(prevLeg) {
+					if(prevLeg.type === 'bus') {
+						if(!prevLeg.hopperApplied) {
+							prevLeg.hopperApplied = true;
+							return legStack; // don't add this free hopper journey
+						} else {
+							return legStack.concat(leg);
+						}
+					} else if (prevLeg.type !== 'walking') {
+						return legStack.concat(Object.assign({}, leg, { hopperApplied: true }));
+					}
+					prevLeg = stackCopy.pop();
 				}
 			default:
 				return legStack.concat(leg);
