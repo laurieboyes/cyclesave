@@ -1,3 +1,7 @@
 .bike-ride-list__table {
 	width: 100%;
 }
+
+.bike-ride-list__table__journey-table {
+	width: 50%;
+}

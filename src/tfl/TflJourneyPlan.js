@@ -15,6 +15,7 @@ export default class TflJourneyPlan {
 				this.isFetched = true;
 				this.rawJourneys = stuff.journeys;
 				this.journeys = stuff.journeys.map(rawJourney => new TflJourney(rawJourney));
+				console.log('this.journeys A', this.journeys);
 			})
 			.catch(err => {
 				console.error(err);
@@ -24,22 +25,18 @@ export default class TflJourneyPlan {
 	}
 
 	fetchCosts () {
-
-	}
-
-	getLegSummaries () {
 		if(this.inError) {
 			return [];
 		} else {
-			return this.rawJourneys[0].legs.map(leg => leg.instruction.summary);
+			return Promise.all(this.journeys.map(j => j.fetchCost()));
 		}
 	}
 
-	getJourneyLegs () {
+	getJourneys() {
 		if(this.inError) {
 			return [];
 		} else {
-			return this.journeys.map(j => j.legs);
+			return this.journeys;
 		}
 	}
 }

@@ -16,23 +16,28 @@ describe('Making a TflJourney from the raw data', () => {
 		const journey = new TflJourney(rawJourneyFixture);
 		expect(journey.legs).toEqual([
 			{
-				type: 'walking'
+				type: 'walking',
+				summary: 'Walk to Forest Hill Station'
 			},
 			{
 				type: 'overground',
+				summary: 'London Overground to Crystal Palace Rail Station',
 				fromNaptanId: '910GFORESTH',
 				toNaptanId: '910GCRYSTLP'
 			},
 			{
 				type: 'national-rail',
+				summary: 'Southern to Tulse Hill',
 				fromNaptanId: '490G01078M',
 				toNaptanId: '490G01298G'
 			},
 			{
-				type: 'bus'
+				type: 'bus',
+				summary: '2 bus or 432 bus to Craignair Road'
 			},
 			{
-				type: 'walking'
+				type: 'walking',
+				summary: 'Walk to Claverdale Road, Tulse Hill'
 			}
 		]);
 	})
