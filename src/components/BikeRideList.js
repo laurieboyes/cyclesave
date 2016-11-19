@@ -29,10 +29,10 @@ export default class BikeRideList extends React.Component {
 	}
 
 	renderJourneyCost (cost) {
-		if(isNaN(cost)) {
-			return '??? uncostable legs';
-		} else if(typeof cost === 'undefined') {
+		if(typeof cost === 'undefined') {
 			return 'loading cost...'
+		} else if(cost === 'uncostable') {
+			return cost;
 		} else {
 			return '£' + cost.toFixed(2);
 		}

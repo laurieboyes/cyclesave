@@ -11,7 +11,7 @@ function getLegCost (leg) {
 		case 'walking':
 			return Promise.resolve(0);
 		default:
-			return Promise.resolve(NaN);
+			return Promise.reject(new Error('Cannot cost leg ' + JSON.stringify(leg)));
 	}
 }
 
@@ -37,16 +37,16 @@ function mergeMergeableLegs (legs) {
 			case 'bus':
 				const stackCopy = [...legStack];
 				let prevLeg = stackCopy.pop();
-				while(prevLeg) {
-					if(prevLeg.type === 'bus') {
-						if(!prevLeg.hopperApplied) {
+				while (prevLeg) {
+					if (prevLeg.type === 'bus') {
+						if (!prevLeg.hopperApplied) {
 							prevLeg.hopperApplied = true;
 							return legStack; // don't add this free hopper journey
 						} else {
 							return legStack.concat(leg);
 						}
 					} else if (prevLeg.type !== 'walking') {
-						return legStack.concat(Object.assign({}, leg, { hopperApplied: true }));
+						return legStack.concat(Object.assign({}, leg, {hopperApplied: true}));
 					}
 					prevLeg = stackCopy.pop();
 				}

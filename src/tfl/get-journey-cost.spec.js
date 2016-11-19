@@ -1,7 +1,7 @@
 describe('Getting journey costs', () => {
 
 	afterEach(() => {
-		jest.resetModules()
+		jest.resetModules();
 	});
 
 	it('should handle just bus journey', () => {
@@ -131,7 +131,7 @@ describe('Getting journey costs', () => {
 			});
 	});
 
-	it('should return NaN when there\'s part of the journey we can\'t cost', () => {
+	it('should throw an error when there\'s part of the journey we can\'t cost', () => {
 		return require('./get-journey-cost').default(
 			[
 				{"type": "walking"},
@@ -139,6 +139,12 @@ describe('Getting journey costs', () => {
 				{"type": "walking"},
 				{"type": "skateboarding"}
 			]
-		).then(res => expect(res).toEqual(NaN));
+		)
+			.then(() => {
+				throw new Error('should not succeed');
+			})
+			.catch(err => {
+				expect(err.message).toEqual('Cannot cost leg {"type":"skateboarding"}');
+			});
 	});
 });

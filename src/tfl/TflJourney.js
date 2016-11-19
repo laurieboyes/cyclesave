@@ -25,6 +25,10 @@ export default class TflJourney {
 
 	fetchCost () {
 		getJourneyCost(this.legs)
-			.then(cost => this.cost = cost);
+			.then(cost => this.cost = cost)
+			.catch(err => {
+				console.log(err);
+				this.cost = 'uncostable';
+			});
 	}
 }
