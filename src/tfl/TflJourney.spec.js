@@ -28,8 +28,10 @@ describe('Making a TflJourney from the raw data', () => {
 			{
 				type: 'national-rail',
 				summary: 'Southern to Tulse Hill',
-				fromNaptanId: '490G01078M',
-				toNaptanId: '490G01298G'
+				fromLat: 51.417447305050004,
+				fromLng: -0.07239314897,
+				toLat: 51.44005299665,
+				toLng: -0.10480975412
 			},
 			{
 				type: 'bus',

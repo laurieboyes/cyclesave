@@ -1,5 +1,25 @@
 import getJourneyCost from './get-journey-cost';
 
+function getTypeSpecificInfo(rawLeg) {
+	switch (rawLeg.mode.id) {
+		case 'overground':
+		case 'tube':
+			return {
+				fromNaptanId: rawLeg.departurePoint.naptanId,
+				toNaptanId: rawLeg.arrivalPoint.naptanId
+			};
+		case 'national-rail':
+			return {
+				fromLat: rawLeg.departurePoint.lat,
+				fromLng: rawLeg.departurePoint.lon,
+				toLat: rawLeg.arrivalPoint.lat,
+				toLng: rawLeg.arrivalPoint.lon
+			}
+		default:
+			return {}
+	}
+}
+
 export default class TflJourney {
 	constructor (rawJourney) {
 		this.legs = rawJourney.legs.map(rawLeg => Object.assign(
@@ -7,10 +27,7 @@ export default class TflJourney {
 					type: rawLeg.mode.id,
 					summary: rawLeg.instruction.summary
 				},
-				(['overground', 'national-rail', 'tube'].includes(rawLeg.mode.id) ? {
-					fromNaptanId: rawLeg.departurePoint.naptanId,
-					toNaptanId: rawLeg.arrivalPoint.naptanId
-				} : {})
+				getTypeSpecificInfo(rawLeg)
 			)
 		);
 	}
