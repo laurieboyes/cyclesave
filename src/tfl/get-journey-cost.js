@@ -1,4 +1,6 @@
-import { fetchTubeAndOvergroundFare } from './tfl-client'
+import { fetchTubeAndOvergroundFare } from '../api-clients/tfl-client'
+import { getStationCodeFromLatLng } from '../api-clients/transport-api-client'
+import { fetchNationalRailFare } from '../api-clients/br-fares-client'
 import deepCopy from '../util/deep-copy'
 
 function getLegCost (leg) {
@@ -6,6 +8,11 @@ function getLegCost (leg) {
 		case 'tube':
 		case 'overground':
 			return fetchTubeAndOvergroundFare(leg.fromNaptanId, leg.toNaptanId);
+		case 'national-rail':
+			return Promise.all([
+				getStationCodeFromLatLng(leg.fromLat, leg.fromLng),
+				getStationCodeFromLatLng(leg.toLat, leg.toLng),
+			]).then(([fromCode, toCode]) => fetchNationalRailFare(fromCode, toCode));
 		case 'bus':
 			return Promise.resolve(1.5);
 		case 'walking':

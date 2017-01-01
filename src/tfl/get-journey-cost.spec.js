@@ -49,7 +49,7 @@ describe('Getting journey costs', () => {
 		it('should not apply hopper fare if there is a tube ride or whatever in between', () => {
 
 			// free tube journey so generous
-			jest.mock('./tfl-client', () => ({
+			jest.mock('../api-clients/tfl-client', () => ({
 					fetchTubeAndOvergroundFare: jest.fn(() => Promise.resolve(0))
 				})
 			);
@@ -92,9 +92,59 @@ describe('Getting journey costs', () => {
 		});
 	});
 
+	it('should handle a national rail journey', () => {
+
+		let stationCodeCalls = 0;
+		const getStationCodeFromLatLngMock = jest.fn(() => {
+			if(!stationCodeCalls++) {
+				return Promise.resolve('FOH')
+			} else {
+				return Promise.resolve('LBG')
+			}
+		});
+		jest.mock('../api-clients/transport-api-client', () => ({
+				getStationCodeFromLatLng: getStationCodeFromLatLngMock
+			})
+		);
+
+		const fetchNationalRailFareMock = jest.fn(() => Promise.resolve(3.8));
+		jest.mock('../api-clients/br-fares-client', () => ({
+				fetchNationalRailFare: fetchNationalRailFareMock
+			})
+		);
+
+		return require('./get-journey-cost').default(
+			[
+				{ "type": "walking" },
+				{
+					"type": "national-rail",
+					fromLat: 51.417447305050004,
+					fromLng: -0.07239314897,
+					toLat: 51.44005299665,
+					toLng: -0.10480975412
+				},
+				{ "type": "walking" }
+			]
+		).then(res => {
+			expect(res).toEqual(3.80)
+			expect(getStationCodeFromLatLngMock.mock.calls[0]).toEqual([
+				51.417447305050004,
+				-0.07239314897,
+			]);
+			expect(getStationCodeFromLatLngMock.mock.calls[1]).toEqual([
+				51.44005299665,
+				-0.10480975412,
+			]);
+			expect(fetchNationalRailFareMock.mock.calls[0]).toEqual([
+				'FOH',
+				'LBG'
+			]);
+		})
+	});
+
 	it('should handle a tube then overground journey', () => {
 
-		jest.mock('./tfl-client', () => ({
+		jest.mock('../api-clients/tfl-client', () => ({
 				fetchTubeAndOvergroundFare: jest.fn(() => Promise.resolve(2.8))
 			})
 		);
@@ -121,7 +171,7 @@ describe('Getting journey costs', () => {
 		)
 			.then(res => {
 				expect(res).toEqual(2.80);
-				expect(require('./tfl-client').fetchTubeAndOvergroundFare.mock.calls).toEqual([
+				expect(require('../api-clients/tfl-client').fetchTubeAndOvergroundFare.mock.calls).toEqual([
 					[
 						'940GZZLULNB',
 						'910GFORESTH'

@@ -1,4 +1,4 @@
-import { fetchJourneyPlan } from './tfl-client'
+import { fetchJourneyPlan } from '../api-clients/tfl-client'
 import TflJourney from './TflJourney';
 
 export default class TflJourneyPlan {
