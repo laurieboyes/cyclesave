@@ -41,7 +41,7 @@ export default class TflJourney {
 	}
 
 	fetchCost () {
-		getJourneyCost(this.legs)
+		return getJourneyCost(this.legs)
 			.then(cost => this.cost = cost)
 			.catch(err => {
 				console.log(err);
