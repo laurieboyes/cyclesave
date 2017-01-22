@@ -21,10 +21,17 @@ export default class App extends React.Component {
 			.then(() => console.log('google API initialised'));
 	}
 
-	signInToGoogleAndGetSomeBikeRides () {
+	handleGetBikeRidesSubmit(e) {
+		e.preventDefault();
+		const fromDate = e.target.querySelector('.js-from-date').value
+		const toDate = e.target.querySelector('.js-to-date').value
+		this.signInToGoogleAndGetSomeBikeRides(fromDate, toDate);
+	}
+
+	signInToGoogleAndGetSomeBikeRides (fromDate, toDate) {
 		this.setState({status: 'loading'});
 		return signInToGoogle()
-			.then(() => getBikeRides(new Date('2016-08-01'), new Date('2016-09-01')))
+			.then(() => getBikeRides(new Date(fromDate), new Date(toDate)))
 			.then(bikeRides => bikeRides.map(bikeRide => Object.assign({}, bikeRide, {
 				journeyPlan: new TflJourneyPlan(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime)
 			})))
@@ -70,8 +77,13 @@ export default class App extends React.Component {
 				<h1>CycleSave</h1>
 
 				<p>Let me take a peek at your Google Fit stuff to see what's up</p>
-				<button onClick={this.signInToGoogleAndGetSomeBikeRides.bind(this)}>Get bike rides in August 2016
-				</button>
+				<form onSubmit={this.handleGetBikeRidesSubmit.bind(this)}>
+					<label for='fromDate'>From</label>
+					<input id='fromDate' type='date' className='js-from-date'/>
+					<label for='toDate'>To</label>
+					<input id='toDate' type='date' className='js-to-date'/>
+					<input type='submit' value='Get bike rides'/>
+				</form>
 				{this.renderBikeRides()}
 				<p>Disclaimer: All this stuff remains between you and Google. I'm not saving any your info anywhere, all
 					this stuff appears on this page and then vanishes</p>
