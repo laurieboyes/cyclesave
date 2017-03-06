@@ -1,0 +1,2915 @@
+{
+    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.ItineraryResult, Tfl.Api.Presentation.Entities",
+    "journeys": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Journey, Tfl.Api.Presentation.Entities",
+            "startDateTime": "2017-03-06T08:46:00",
+            "duration": 58,
+            "arrivalDateTime": "2017-03-06T09:44:00",
+            "legs": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 4,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to Craignair Road",
+                        "detailed": "Walk to Craignair Road",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "Claverdale Road for 128 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Claverdale Road",
+                                "distance": 128,
+                                "cumulativeDistance": 128,
+                                "skyDirection": 422,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 114,
+                                "latitude": 51.44784248795,
+                                "longitude": -0.11496422766999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Tulse Hill, continue for 117 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Tulse Hill",
+                                "distance": 117,
+                                "cumulativeDistance": 245,
+                                "skyDirection": 361,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 217,
+                                "latitude": 51.44792094248999,
+                                "longitude": -0.1131332769,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [],
+                    "departureTime": "2017-03-06T08:46:00",
+                    "arrivalTime": "2017-03-06T08:50:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "platformName": "",
+                        "icsCode": "99999997",
+                        "commonName": "Claverdale Road, Tulse Hill",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.44784248795,
+                        "lon": -0.11496422766999999
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00005366",
+                        "platformName": "",
+                        "stopLetter": "K",
+                        "icsCode": "1005366",
+                        "commonName": "Craignair Road",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.44897307667,
+                        "lon": -0.11313307679000001
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.44784248795, -0.11496422767],[51.44792094249, -0.1131332769],[51.44838801754, -0.11309962981],[51.44875623925, -0.11307005742],[51.44897145615, -0.11303240082],[51.44897307667, -0.11313307679]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 245,
+                    "isDisrupted": false,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 19,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "2 bus or 432 bus or 415 bus to Brixton Station",
+                        "detailed": "2 bus towards Marylebone or 432 bus towards Brixton or 415 bus towards Old Kent Road, Tesco",
+                        "steps": []
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1000031,
+                            "position": "AFTER"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "STAIRS",
+                            "incline": "DOWN",
+                            "stopId": 1000031,
+                            "position": "AFTER"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "ESCALATOR",
+                            "incline": "DOWN",
+                            "stopId": 1000031,
+                            "position": "AFTER"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T08:50:00",
+                    "arrivalTime": "2017-03-06T09:09:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00005366",
+                        "platformName": "",
+                        "stopLetter": "K",
+                        "icsCode": "1005366",
+                        "commonName": "Craignair Road",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.44897307667,
+                        "lon": -0.11313307679000001
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00031N",
+                        "platformName": "T",
+                        "stopLetter": "T",
+                        "icsCode": "1000031",
+                        "commonName": "Brixton Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.46196750886,
+                        "lon": -0.11537557086000001
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.44897145615, -0.11303240082],[51.44899841614, -0.11303128929],[51.45010192332, -0.11287065405],[51.45066048542, -0.11293397607],[51.45095889736, -0.11303681102],[51.45133842065, -0.11315069561],[51.45133842065, -0.11315069561],[51.45169973902, -0.11325093987],[51.45196174108, -0.11332649455],[51.45260257161, -0.11347279028],[51.45292447101, -0.11335876852],[51.45345144283, -0.11313553717],[51.45381044604, -0.11309194748],[51.45412683109, -0.11319404891],[51.45437984646, -0.11326997744],[51.45443422939, -0.11329652223],[51.45460659627, -0.1133901705],[51.45460659627, -0.1133901705],[51.4552239384, -0.11375334984],[51.45581223681, -0.11398819001],[51.45617447997, -0.11414598799],[51.45655423347, -0.11427427834],[51.45662658949, -0.1143000848],[51.45662658949, -0.1143000848],[51.4569342182, -0.11441695553],[51.45705173884, -0.11445529555],[51.45747665663, -0.11459612412],[51.45795595686, -0.11476350368],[51.45837188762, -0.11490470795],[51.45837188762, -0.11490470795],[51.45846244813, -0.11494416112],[51.45903230829, -0.11515100172],[51.45917635808, -0.11572086854],[51.45921554153, -0.11592078539],[51.45931627208, -0.11659320576],[51.4595432497, -0.11672781335],[51.4601400406, -0.11637215417],[51.46024672484, -0.11629578488],[51.46024672484, -0.11629578488],[51.46062968388, -0.11606408437],[51.46094167392, -0.11589288512],[51.46119997495, -0.11573829049],[51.4612979033, -0.11567667423],[51.46183340282, -0.11542428318],[51.46196750886, -0.11537557086]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00004401",
+                                "name": "Jubilee Primary School",
+                                "uri": "/StopPoint/490G00004401",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00015275",
+                                "name": "Brixton Water Lane",
+                                "uri": "/StopPoint/490G00015275",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00005847",
+                                "name": "Morval Road",
+                                "uri": "/StopPoint/490G00005847",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00012810",
+                                "name": "St Matthews Estate",
+                                "uri": "/StopPoint/490G00012810",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G000627",
+                                "name": "Lambeth Town Hall",
+                                "uri": "/StopPoint/490G000627",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00031N",
+                                "name": "Brixton Station",
+                                "uri": "/StopPoint/490G00031N",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "2",
+                            "directions": [
+                                "Marylebone"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "2",
+                                "name": "2",
+                                "uri": "/Line/2",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "432",
+                            "directions": [
+                                "Brixton"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "432",
+                                "name": "432",
+                                "uri": "/Line/432",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "415",
+                            "directions": [
+                                "Old Kent Road, Tesco"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "415",
+                                "name": "415",
+                                "uri": "/Line/415",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "bus",
+                        "name": "bus",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "isDisrupted": false,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 2,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Victoria line to Stockwell",
+                        "detailed": "Victoria line towards Walthamstow Central, or Seven Sisters",
+                        "steps": []
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1000223,
+                            "position": "AFTER"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T09:14:00",
+                    "arrivalTime": "2017-03-06T09:16:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUBXN",
+                        "platformName": "",
+                        "icsCode": "1000031",
+                        "commonName": "Brixton Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.46248496111,
+                        "lon": -0.11400102202000001
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUSKW",
+                        "platformName": "",
+                        "icsCode": "1000223",
+                        "commonName": "Stockwell Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.471933246519995,
+                        "lon": -0.1227835773
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.46248496111, -0.11400102202],[51.4625876195, -0.115911472],[51.46272683939, -0.11674071472],[51.46375558934, -0.12088773421],[51.46399247541, -0.12164101969],[51.46519299074, -0.12416876915],[51.46562710323, -0.12488521576],[51.46607642446, -0.12542828632],[51.46649510327, -0.12574226578],[51.46710089218, -0.12594780229],[51.46765046082, -0.12601167053],[51.46824105314, -0.12582909555],[51.46996836704, -0.12475042238],[51.47049213707, -0.12432578543],[51.47139358208, -0.12333848792],[51.471914582, -0.12274114637]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUSKW",
+                                "name": "Stockwell Underground Station",
+                                "uri": "/StopPoint/940GZZLUSKW",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "Victoria",
+                            "directions": [
+                                "Walthamstow Central Underground Station",
+                                "Seven Sisters Underground Station"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "victoria",
+                                "name": "Victoria",
+                                "uri": "/Line/victoria",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "tube",
+                        "name": "tube",
+                        "type": "Mode"
+                    },
+                    "disruptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "BRIXTON: The busiest time at Brixton Tube station is 08:15 - 08:45 on weekdays. If you are able to travel outside this time, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "",
+                            "created": "2016-12-15T09:50:00",
+                            "lastUpdate": "2016-12-15T09:50:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Information",
+                            "type": "stopInfo",
+                            "categoryDescription": "Information",
+                            "description": "STOCKWELL STATION: A ramp is provided at this station providing step-free interchange between northbound Northern and northbound Victoria line trains, and between southbound Northern and southbound Victoria line trains. Please ask staff in the ticket hall at the start of your journey to ensure the ramp will be available when you arrive at your destination.",
+                            "additionalInfo": "",
+                            "created": "2012-06-29T15:46:00",
+                            "lastUpdate": "2017-01-19T10:46:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "STOCKWELL: The busiest times at Stockwell Tube station are 08:15 - 08:45 and 17:45 - 18:30 on weekdays. If you are able to travel outside these times, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "<a href=\"http://content.tfl.gov.uk/emails/events/travel-options-from-stockwell-station.pdf\">Download PDF for details about busiest times at Stockwell Tube station</a>",
+                            "created": "2016-12-15T09:03:00",
+                            "lastUpdate": "2017-02-28T15:57:00"
+                        }
+                    ],
+                    "plannedWorks": [],
+                    "isDisrupted": true,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 8,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Northern line to Borough",
+                        "detailed": "Northern line towards Edgware via Bank, or Golders Green via Bank",
+                        "steps": []
+                    },
+                    "obstacles": [],
+                    "departureTime": "2017-03-06T09:18:00",
+                    "arrivalTime": "2017-03-06T09:26:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUSKW",
+                        "platformName": "",
+                        "icsCode": "1000223",
+                        "commonName": "Stockwell Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.471827249410005,
+                        "lon": -0.12290312043
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUBOR",
+                        "platformName": "",
+                        "icsCode": "1000026",
+                        "commonName": "Borough Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.50098357366,
+                        "lon": -0.09350844432
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.47180858494, -0.12286068955],[51.47287707533, -0.12163608379],[51.47311625724, -0.12141026792],[51.47340037202, -0.12118260351],[51.47460410515, -0.11998115385],[51.47499282587, -0.11954757135],[51.47564721978, -0.11885824921],[51.47737050986, -0.11697285243],[51.47799908372, -0.11635652502],[51.47921082519, -0.11509688782],[51.48131352665, -0.11276347797],[51.48155292191, -0.11255196582],[51.48155292191, -0.11255196582],[51.48283859898, -0.11141869426],[51.4844055716, -0.10988484786],[51.48585476828, -0.10829815498],[51.48773893815, -0.10636204816],[51.48843818208, -0.1056704798],[51.48843818208, -0.1056704798],[51.48924386455, -0.10488804931],[51.49046469361, -0.10364181578],[51.49155560193, -0.10270341997],[51.49282123418, -0.10089338068],[51.49315852555, -0.10062005897],[51.49354308086, -0.10048882717],[51.49480375987, -0.10059488848],[51.49506320321, -0.1005120717],[51.49506320321, -0.1005120717],[51.49510790265, -0.10049580709],[51.49586406073, -0.09998895296],[51.49664927577, -0.09961053486],[51.4971185611, -0.09915880473],[51.49823218637, -0.09795988191],[51.49906885266, -0.0968732912],[51.500110428, -0.09511535224],[51.50057267626, -0.09423159033],[51.50099279421, -0.09352246776]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUOVL",
+                                "name": "Oval Underground Station",
+                                "uri": "/StopPoint/940GZZLUOVL",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUKNG",
+                                "name": "Kennington Underground Station",
+                                "uri": "/StopPoint/940GZZLUKNG",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUEAC",
+                                "name": "Elephant & Castle Underground Station",
+                                "uri": "/StopPoint/940GZZLUEAC",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUBOR",
+                                "name": "Borough Underground Station",
+                                "uri": "/StopPoint/940GZZLUBOR",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "Northern",
+                            "directions": [
+                                "Edgware via Bank",
+                                "Golders Green via Bank"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "northern",
+                                "name": "Northern",
+                                "uri": "/Line/northern",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "tube",
+                        "name": "tube",
+                        "type": "Mode"
+                    },
+                    "disruptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Information",
+                            "type": "stopInfo",
+                            "categoryDescription": "Information",
+                            "description": "STOCKWELL STATION: A ramp is provided at this station providing step-free interchange between northbound Northern and northbound Victoria line trains, and between southbound Northern and southbound Victoria line trains. Please ask staff in the ticket hall at the start of your journey to ensure the ramp will be available when you arrive at your destination.",
+                            "additionalInfo": "",
+                            "created": "2012-06-29T15:46:00",
+                            "lastUpdate": "2017-01-19T10:46:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "STOCKWELL: The busiest times at Stockwell Tube station are 08:15 - 08:45 and 17:45 - 18:30 on weekdays. If you are able to travel outside these times, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "<a href=\"http://content.tfl.gov.uk/emails/events/travel-options-from-stockwell-station.pdf\">Download PDF for details about busiest times at Stockwell Tube station</a>",
+                            "created": "2016-12-15T09:03:00",
+                            "lastUpdate": "2017-02-28T15:57:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "BOROUGH: The busiest time at Borough Tube station is 17:30 - 18:00 on weekdays. If you are able to travel outside this time, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "<a href=\"http://content.tfl.gov.uk/emails/events/travel-options-from-borough-station.pdf\">Download PDF for details about busiest times at Borough Tube station</a>",
+                            "created": "2016-12-15T09:01:00",
+                            "lastUpdate": "2017-02-27T14:23:00"
+                        }
+                    ],
+                    "plannedWorks": [],
+                    "isDisrupted": true,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 16,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to 34 Park Street, Southwark",
+                        "detailed": "Walk to 34 Park Street, Southwark",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "Borough High Street for 15 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Borough High Street",
+                                "distance": 15,
+                                "cumulativeDistance": 15,
+                                "skyDirection": 403,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 14,
+                                "latitude": 51.50117823313,
+                                "longitude": -0.09331301234,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Marshalsea Road, continue for 156 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Marshalsea Road",
+                                "distance": 156,
+                                "cumulativeDistance": 171,
+                                "skyDirection": 292,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 153,
+                                "latitude": 51.501283963940004,
+                                "longitude": -0.09317892418,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Redcross Way, continue for 342 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Redcross Way",
+                                "distance": 342,
+                                "cumulativeDistance": 513,
+                                "skyDirection": 386,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 459,
+                                "latitude": 51.50191905111,
+                                "longitude": -0.09518401927999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Southwark Street, continue for 18 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Southwark Street",
+                                "distance": 18,
+                                "cumulativeDistance": 531,
+                                "skyDirection": 273,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 475,
+                                "latitude": 51.50469929304,
+                                "longitude": -0.0930651685,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Thrale Street, continue for 40 metres",
+                                "turnDirection": "SLIGHT_RIGHT",
+                                "streetName": "Thrale Street",
+                                "distance": 40,
+                                "cumulativeDistance": 571,
+                                "skyDirection": 300,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 511,
+                                "latitude": 51.50471249372,
+                                "longitude": -0.09332398712000001,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 7 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "",
+                                "distance": 7,
+                                "cumulativeDistance": 578,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 517,
+                                "latitude": 51.504900415899996,
+                                "longitude": -0.09382047467,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Maiden Road, continue for 109 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Maiden Road",
+                                "distance": 109,
+                                "cumulativeDistance": 687,
+                                "skyDirection": 364,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 614,
+                                "latitude": 51.50496285313999,
+                                "longitude": -0.09378904997,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Perkins Square, continue for 85 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Perkins Square",
+                                "distance": 85,
+                                "cumulativeDistance": 772,
+                                "skyDirection": 317,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 689,
+                                "latitude": 51.50589182869,
+                                "longitude": -0.0934044443,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Porter Street, continue for 72 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Porter Street",
+                                "distance": 72,
+                                "cumulativeDistance": 844,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 752,
+                                "latitude": 51.506338626390004,
+                                "longitude": -0.09433684939,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "STAIRS",
+                            "incline": "UP",
+                            "stopId": 1000026,
+                            "position": "BEFORE"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1000026,
+                            "position": "BEFORE"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T09:28:00",
+                    "arrivalTime": "2017-03-06T09:44:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00026B",
+                        "platformName": "",
+                        "icsCode": "1000026",
+                        "commonName": "Borough Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.50098357366,
+                        "lon": -0.09350844432
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+                        "commonName": "34 Park Street, Southwark",
+                        "placeType": "StopPoint",
+                        "lat": 51.50695401307,
+                        "lon": -0.0940229701
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.50098357366, -0.09350844432],[51.50122457008, -0.09339752828],[51.50123355656, -0.09339715322],[51.50123355656, -0.09339715322],[51.50117823313, -0.09331301234],[51.50122199502, -0.09323914415],[51.50128396394, -0.09317892418],[51.50155220308, -0.09419072604],[51.50171292798, -0.09467390897],[51.5018729493, -0.095113899],[51.50191905111, -0.09518401928],[51.50217638489, -0.09497156805],[51.50225656157, -0.09492499845],[51.50240769447, -0.0948178346],[51.50265604104, -0.09460575381],[51.50313546195, -0.09422553262],[51.50373928793, -0.09375365709],[51.50469929304, -0.0930651685],[51.50471249372, -0.09332398712],[51.5049004159, -0.09382047467],[51.5049004159, -0.09382047467],[51.50496285314, -0.09378904997],[51.50496285314, -0.09378904997],[51.5056534074, -0.09367377179],[51.50589182869, -0.0934044443],[51.50589182869, -0.0934044443],[51.50611265386, -0.09371224342],[51.50611265386, -0.09371224342],[51.50627862327, -0.09396469495],[51.50633862639, -0.09433684939],[51.50695401307, -0.0940229701]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 844,
+                    "isDisrupted": false,
+                    "hasFixedLocations": false
+                }
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Journey, Tfl.Api.Presentation.Entities",
+            "startDateTime": "2017-03-06T08:53:00",
+            "duration": 52,
+            "arrivalDateTime": "2017-03-06T09:45:00",
+            "legs": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 12,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to Jebb Avenue / Brixton Prison",
+                        "detailed": "Walk to Jebb Avenue / Brixton Prison",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "Claverdale Road for 79 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Claverdale Road",
+                                "distance": 79,
+                                "cumulativeDistance": 79,
+                                "skyDirection": 265,
+                                "skyDirectionDescription": "West",
+                                "cumulativeTravelTime": 71,
+                                "latitude": 51.44784248795,
+                                "longitude": -0.11496422766999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Elm Park, continue for 599 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Elm Park",
+                                "distance": 599,
+                                "cumulativeDistance": 678,
+                                "skyDirection": 322,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 609,
+                                "latitude": 51.44765290342,
+                                "longitude": -0.11603699969,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Brixton Hill, continue for 73 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Brixton Hill",
+                                "distance": 73,
+                                "cumulativeDistance": 751,
+                                "skyDirection": 201,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 673,
+                                "latitude": 51.45165420408,
+                                "longitude": -0.12161495355,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [],
+                    "departureTime": "2017-03-06T08:53:00",
+                    "arrivalTime": "2017-03-06T09:05:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "platformName": "",
+                        "icsCode": "99999997",
+                        "commonName": "Claverdale Road, Tulse Hill",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.44784248795,
+                        "lon": -0.11496422766999999
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00008544",
+                        "platformName": "BV",
+                        "stopLetter": "BV",
+                        "icsCode": "1008544",
+                        "commonName": "Jebb Avenue / Brixton Prison",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.45107813341,
+                        "lon": -0.12214233454
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.44784248795, -0.11496422767],[51.44782385247, -0.11548308774],[51.44765290342, -0.11603699969],[51.44809304613, -0.11656576132],[51.44869448482, -0.11705911388],[51.44921296267, -0.11742636434],[51.4496526375, -0.11792639207],[51.44991142222, -0.11836190551],[51.45128966114, -0.12075197115],[51.45165420408, -0.12161495355],[51.45104909963, -0.12201399371],[51.45107813341, -0.12214233454]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 751,
+                    "isDisrupted": false,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 7,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "118 bus or 45 bus or 133 bus or 109 bus or 333 bus or 250 bus or 59 bus to Brixton Station",
+                        "detailed": "118 bus towards Brixton or 45 bus towards King's Cross or 133 bus towards Liverpool Street or 109 bus towards Brixton or 333 bus towards Elephant & Castle or 250 bus towards Brixton or 59 bus towards King's Cross",
+                        "steps": []
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1000031,
+                            "position": "AFTER"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "STAIRS",
+                            "incline": "DOWN",
+                            "stopId": 1000031,
+                            "position": "AFTER"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "ESCALATOR",
+                            "incline": "DOWN",
+                            "stopId": 1000031,
+                            "position": "AFTER"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T09:05:00",
+                    "arrivalTime": "2017-03-06T09:12:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00008544",
+                        "platformName": "BV",
+                        "stopLetter": "BV",
+                        "icsCode": "1008544",
+                        "commonName": "Jebb Avenue / Brixton Prison",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.45107813341,
+                        "lon": -0.12214233454
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00031N",
+                        "platformName": "S",
+                        "stopLetter": "S",
+                        "icsCode": "1000031",
+                        "commonName": "Brixton Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.46213686768,
+                        "lon": -0.11528221799
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.45104909963, -0.12201399371],[51.45165420408, -0.12161495355],[51.45176987886, -0.12153824221],[51.45200122825, -0.12138481833],[51.45217036205, -0.12127712553],[51.45261577809, -0.12101415926],[51.4532388521, -0.12061435361],[51.45331005387, -0.12056824987],[51.45331005387, -0.12056824987],[51.45360384744, -0.12038346431],[51.45373726407, -0.12029162435],[51.45444951013, -0.1198449542],[51.45452071156, -0.119798848],[51.45508156633, -0.11944474672],[51.45515276758, -0.11939863924],[51.45525069812, -0.11933703925],[51.45534862861, -0.11927543899],[51.45567790504, -0.1190603901],[51.45601616771, -0.1188449686],[51.45729870603, -0.118072517],[51.45760148183, -0.11788732907],[51.45764595332, -0.11785671062],[51.45764595332, -0.11785671062],[51.45816233006, -0.11753317967],[51.45862570987, -0.11726940159],[51.45911581795, -0.11699012296],[51.45947204963, -0.11677392957],[51.4595432497, -0.11672781335],[51.45984602307, -0.1165426071],[51.45984602307, -0.1165426071],[51.4601400406, -0.11637215417],[51.46062968388, -0.11606408437],[51.46094167392, -0.11589288512],[51.46119997495, -0.11573829049],[51.4612979033, -0.11567667423],[51.46183340282, -0.11542428318],[51.46199423756, -0.1153600738],[51.46213709895, -0.11529660443]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00004101",
+                                "name": "Blenheim Gardens",
+                                "uri": "/StopPoint/490G00004101",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00011793",
+                                "name": "Rush Common",
+                                "uri": "/StopPoint/490G00011793",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G000627",
+                                "name": "Lambeth Town Hall",
+                                "uri": "/StopPoint/490G000627",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00031N",
+                                "name": "Brixton Station",
+                                "uri": "/StopPoint/490G00031N",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "118",
+                            "directions": [
+                                "Brixton"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "118",
+                                "name": "118",
+                                "uri": "/Line/118",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "45",
+                            "directions": [
+                                "King's Cross"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "45",
+                                "name": "45",
+                                "uri": "/Line/45",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "133",
+                            "directions": [
+                                "Liverpool Street"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "133",
+                                "name": "133",
+                                "uri": "/Line/133",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "109",
+                            "directions": [
+                                "Brixton"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "109",
+                                "name": "109",
+                                "uri": "/Line/109",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "333",
+                            "directions": [
+                                "Elephant & Castle"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "333",
+                                "name": "333",
+                                "uri": "/Line/333",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "250",
+                            "directions": [
+                                "Brixton"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "250",
+                                "name": "250",
+                                "uri": "/Line/250",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "59",
+                            "directions": [
+                                "King's Cross"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "59",
+                                "name": "59",
+                                "uri": "/Line/59",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "bus",
+                        "name": "bus",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "isDisrupted": false,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 1,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Victoria line to Stockwell",
+                        "detailed": "Victoria line towards Seven Sisters, or Walthamstow Central",
+                        "steps": []
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1000223,
+                            "position": "AFTER"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T09:18:00",
+                    "arrivalTime": "2017-03-06T09:19:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUBXN",
+                        "platformName": "",
+                        "icsCode": "1000031",
+                        "commonName": "Brixton Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.46248496111,
+                        "lon": -0.11400102202000001
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUSKW",
+                        "platformName": "",
+                        "icsCode": "1000223",
+                        "commonName": "Stockwell Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.471933246519995,
+                        "lon": -0.1227835773
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.46248496111, -0.11400102202],[51.4625876195, -0.115911472],[51.46272683939, -0.11674071472],[51.46375558934, -0.12088773421],[51.46399247541, -0.12164101969],[51.46519299074, -0.12416876915],[51.46562710323, -0.12488521576],[51.46607642446, -0.12542828632],[51.46649510327, -0.12574226578],[51.46710089218, -0.12594780229],[51.46765046082, -0.12601167053],[51.46824105314, -0.12582909555],[51.46996836704, -0.12475042238],[51.47049213707, -0.12432578543],[51.47139358208, -0.12333848792],[51.471914582, -0.12274114637]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUSKW",
+                                "name": "Stockwell Underground Station",
+                                "uri": "/StopPoint/940GZZLUSKW",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "Victoria",
+                            "directions": [
+                                "Seven Sisters Underground Station",
+                                "Walthamstow Central Underground Station"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "victoria",
+                                "name": "Victoria",
+                                "uri": "/Line/victoria",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "tube",
+                        "name": "tube",
+                        "type": "Mode"
+                    },
+                    "disruptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "BRIXTON: The busiest time at Brixton Tube station is 08:15 - 08:45 on weekdays. If you are able to travel outside this time, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "",
+                            "created": "2016-12-15T09:50:00",
+                            "lastUpdate": "2016-12-15T09:50:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Information",
+                            "type": "stopInfo",
+                            "categoryDescription": "Information",
+                            "description": "STOCKWELL STATION: A ramp is provided at this station providing step-free interchange between northbound Northern and northbound Victoria line trains, and between southbound Northern and southbound Victoria line trains. Please ask staff in the ticket hall at the start of your journey to ensure the ramp will be available when you arrive at your destination.",
+                            "additionalInfo": "",
+                            "created": "2012-06-29T15:46:00",
+                            "lastUpdate": "2017-01-19T10:46:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "STOCKWELL: The busiest times at Stockwell Tube station are 08:15 - 08:45 and 17:45 - 18:30 on weekdays. If you are able to travel outside these times, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "<a href=\"http://content.tfl.gov.uk/emails/events/travel-options-from-stockwell-station.pdf\">Download PDF for details about busiest times at Stockwell Tube station</a>",
+                            "created": "2016-12-15T09:03:00",
+                            "lastUpdate": "2017-02-28T15:57:00"
+                        }
+                    ],
+                    "plannedWorks": [],
+                    "isDisrupted": true,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 8,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Northern line to Borough",
+                        "detailed": "Northern line towards Edgware via Bank, or Golders Green via Bank",
+                        "steps": []
+                    },
+                    "obstacles": [],
+                    "departureTime": "2017-03-06T09:21:00",
+                    "arrivalTime": "2017-03-06T09:29:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUSKW",
+                        "platformName": "",
+                        "icsCode": "1000223",
+                        "commonName": "Stockwell Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.471827249410005,
+                        "lon": -0.12290312043
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "940GZZLUBOR",
+                        "platformName": "",
+                        "icsCode": "1000026",
+                        "commonName": "Borough Underground Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.50098357366,
+                        "lon": -0.09350844432
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.47180858494, -0.12286068955],[51.47287707533, -0.12163608379],[51.47311625724, -0.12141026792],[51.47340037202, -0.12118260351],[51.47460410515, -0.11998115385],[51.47499282587, -0.11954757135],[51.47564721978, -0.11885824921],[51.47737050986, -0.11697285243],[51.47799908372, -0.11635652502],[51.47921082519, -0.11509688782],[51.48131352665, -0.11276347797],[51.48155292191, -0.11255196582],[51.48155292191, -0.11255196582],[51.48283859898, -0.11141869426],[51.4844055716, -0.10988484786],[51.48585476828, -0.10829815498],[51.48773893815, -0.10636204816],[51.48843818208, -0.1056704798],[51.48843818208, -0.1056704798],[51.48924386455, -0.10488804931],[51.49046469361, -0.10364181578],[51.49155560193, -0.10270341997],[51.49282123418, -0.10089338068],[51.49315852555, -0.10062005897],[51.49354308086, -0.10048882717],[51.49480375987, -0.10059488848],[51.49506320321, -0.1005120717],[51.49506320321, -0.1005120717],[51.49510790265, -0.10049580709],[51.49586406073, -0.09998895296],[51.49664927577, -0.09961053486],[51.4971185611, -0.09915880473],[51.49823218637, -0.09795988191],[51.49906885266, -0.0968732912],[51.500110428, -0.09511535224],[51.50057267626, -0.09423159033],[51.50099279421, -0.09352246776]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUOVL",
+                                "name": "Oval Underground Station",
+                                "uri": "/StopPoint/940GZZLUOVL",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUKNG",
+                                "name": "Kennington Underground Station",
+                                "uri": "/StopPoint/940GZZLUKNG",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUEAC",
+                                "name": "Elephant & Castle Underground Station",
+                                "uri": "/StopPoint/940GZZLUEAC",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "940GZZLUBOR",
+                                "name": "Borough Underground Station",
+                                "uri": "/StopPoint/940GZZLUBOR",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "Northern",
+                            "directions": [
+                                "Edgware via Bank",
+                                "Golders Green via Bank"
+                            ],
+                            "lineIdentifier": {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "northern",
+                                "name": "Northern",
+                                "uri": "/Line/northern",
+                                "type": "Line",
+                                "crowding": {
+                                    "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                }
+                            }
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "tube",
+                        "name": "tube",
+                        "type": "Mode"
+                    },
+                    "disruptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Information",
+                            "type": "stopInfo",
+                            "categoryDescription": "Information",
+                            "description": "STOCKWELL STATION: A ramp is provided at this station providing step-free interchange between northbound Northern and northbound Victoria line trains, and between southbound Northern and southbound Victoria line trains. Please ask staff in the ticket hall at the start of your journey to ensure the ramp will be available when you arrive at your destination.",
+                            "additionalInfo": "",
+                            "created": "2012-06-29T15:46:00",
+                            "lastUpdate": "2017-01-19T10:46:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "STOCKWELL: The busiest times at Stockwell Tube station are 08:15 - 08:45 and 17:45 - 18:30 on weekdays. If you are able to travel outside these times, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "<a href=\"http://content.tfl.gov.uk/emails/events/travel-options-from-stockwell-station.pdf\">Download PDF for details about busiest times at Stockwell Tube station</a>",
+                            "created": "2016-12-15T09:03:00",
+                            "lastUpdate": "2017-02-28T15:57:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                            "category": "Crowding",
+                            "type": "stopInfo",
+                            "categoryDescription": "Crowding",
+                            "description": "BOROUGH: The busiest time at Borough Tube station is 17:30 - 18:00 on weekdays. If you are able to travel outside this time, you could have a quicker and more comfortable journey",
+                            "additionalInfo": "<a href=\"http://content.tfl.gov.uk/emails/events/travel-options-from-borough-station.pdf\">Download PDF for details about busiest times at Borough Tube station</a>",
+                            "created": "2016-12-15T09:01:00",
+                            "lastUpdate": "2017-02-27T14:23:00"
+                        }
+                    ],
+                    "plannedWorks": [],
+                    "isDisrupted": true,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 16,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to 34 Park Street, Southwark",
+                        "detailed": "Walk to 34 Park Street, Southwark",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "Borough High Street for 15 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Borough High Street",
+                                "distance": 15,
+                                "cumulativeDistance": 15,
+                                "skyDirection": 403,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 14,
+                                "latitude": 51.50117823313,
+                                "longitude": -0.09331301234,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Marshalsea Road, continue for 156 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Marshalsea Road",
+                                "distance": 156,
+                                "cumulativeDistance": 171,
+                                "skyDirection": 292,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 153,
+                                "latitude": 51.501283963940004,
+                                "longitude": -0.09317892418,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Redcross Way, continue for 342 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Redcross Way",
+                                "distance": 342,
+                                "cumulativeDistance": 513,
+                                "skyDirection": 386,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 459,
+                                "latitude": 51.50191905111,
+                                "longitude": -0.09518401927999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Southwark Street, continue for 18 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Southwark Street",
+                                "distance": 18,
+                                "cumulativeDistance": 531,
+                                "skyDirection": 273,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 475,
+                                "latitude": 51.50469929304,
+                                "longitude": -0.0930651685,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Thrale Street, continue for 40 metres",
+                                "turnDirection": "SLIGHT_RIGHT",
+                                "streetName": "Thrale Street",
+                                "distance": 40,
+                                "cumulativeDistance": 571,
+                                "skyDirection": 300,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 511,
+                                "latitude": 51.50471249372,
+                                "longitude": -0.09332398712000001,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 7 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "",
+                                "distance": 7,
+                                "cumulativeDistance": 578,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 517,
+                                "latitude": 51.504900415899996,
+                                "longitude": -0.09382047467,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Maiden Road, continue for 109 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Maiden Road",
+                                "distance": 109,
+                                "cumulativeDistance": 687,
+                                "skyDirection": 364,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 614,
+                                "latitude": 51.50496285313999,
+                                "longitude": -0.09378904997,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Perkins Square, continue for 85 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Perkins Square",
+                                "distance": 85,
+                                "cumulativeDistance": 772,
+                                "skyDirection": 317,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 689,
+                                "latitude": 51.50589182869,
+                                "longitude": -0.0934044443,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Porter Street, continue for 72 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Porter Street",
+                                "distance": 72,
+                                "cumulativeDistance": 844,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 752,
+                                "latitude": 51.506338626390004,
+                                "longitude": -0.09433684939,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "STAIRS",
+                            "incline": "UP",
+                            "stopId": 1000026,
+                            "position": "BEFORE"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1000026,
+                            "position": "BEFORE"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T09:29:00",
+                    "arrivalTime": "2017-03-06T09:45:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00026B",
+                        "platformName": "",
+                        "icsCode": "1000026",
+                        "commonName": "Borough Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.50098357366,
+                        "lon": -0.09350844432
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+                        "commonName": "34 Park Street, Southwark",
+                        "placeType": "StopPoint",
+                        "lat": 51.50695401307,
+                        "lon": -0.0940229701
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.50098357366, -0.09350844432],[51.50122457008, -0.09339752828],[51.50123355656, -0.09339715322],[51.50123355656, -0.09339715322],[51.50117823313, -0.09331301234],[51.50122199502, -0.09323914415],[51.50128396394, -0.09317892418],[51.50155220308, -0.09419072604],[51.50171292798, -0.09467390897],[51.5018729493, -0.095113899],[51.50191905111, -0.09518401928],[51.50217638489, -0.09497156805],[51.50225656157, -0.09492499845],[51.50240769447, -0.0948178346],[51.50265604104, -0.09460575381],[51.50313546195, -0.09422553262],[51.50373928793, -0.09375365709],[51.50469929304, -0.0930651685],[51.50471249372, -0.09332398712],[51.5049004159, -0.09382047467],[51.5049004159, -0.09382047467],[51.50496285314, -0.09378904997],[51.50496285314, -0.09378904997],[51.5056534074, -0.09367377179],[51.50589182869, -0.0934044443],[51.50589182869, -0.0934044443],[51.50611265386, -0.09371224342],[51.50611265386, -0.09371224342],[51.50627862327, -0.09396469495],[51.50633862639, -0.09433684939],[51.50695401307, -0.0940229701]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 844,
+                    "isDisrupted": false,
+                    "hasFixedLocations": false
+                }
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Journey, Tfl.Api.Presentation.Entities",
+            "startDateTime": "2017-03-06T08:59:00",
+            "duration": 48,
+            "arrivalDateTime": "2017-03-06T09:47:00",
+            "legs": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 23,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to Herne Hill Station",
+                        "detailed": "Walk to Herne Hill Station",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "Claverdale Road for 128 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Claverdale Road",
+                                "distance": 128,
+                                "cumulativeDistance": 128,
+                                "skyDirection": 422,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 114,
+                                "latitude": 51.44784248795,
+                                "longitude": -0.11496422766999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Tulse Hill, continue for 339 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Tulse Hill",
+                                "distance": 339,
+                                "cumulativeDistance": 467,
+                                "skyDirection": 361,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 416,
+                                "latitude": 51.44792094248999,
+                                "longitude": -0.1131332769,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 686 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "",
+                                "distance": 686,
+                                "cumulativeDistance": 1153,
+                                "skyDirection": 440,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 1027,
+                                "latitude": 51.450958897359996,
+                                "longitude": -0.11303681101999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Dulwich Road, continue for 119 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Dulwich Road",
+                                "distance": 119,
+                                "cumulativeDistance": 1272,
+                                "skyDirection": 476,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 1133,
+                                "latitude": 51.453128150569995,
+                                "longitude": -0.10480084562,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1001149,
+                            "position": "IDEST"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "WALKWAY",
+                            "incline": "LEVEL",
+                            "stopId": 1001149,
+                            "position": "IDEST"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "STAIRS",
+                            "incline": "UP",
+                            "stopId": 1001149,
+                            "position": "IDEST"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T08:59:00",
+                    "arrivalTime": "2017-03-06T09:22:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "platformName": "",
+                        "icsCode": "99999997",
+                        "commonName": "Claverdale Road, Tulse Hill",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.44784248795,
+                        "lon": -0.11496422766999999
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G01149L",
+                        "platformName": "",
+                        "icsCode": "1001149",
+                        "commonName": "Herne Hill Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.453427058289996,
+                        "lon": -0.10215450237
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.44784248795, -0.11496422767],[51.44792094249, -0.1131332769],[51.44838801754, -0.11309962981],[51.44875623925, -0.11307005742],[51.44899841614, -0.11303128929],[51.45010192332, -0.11287065405],[51.45066048542, -0.11293397607],[51.45095889736, -0.11303681102],[51.45095889736, -0.11303681102],[51.45108184024, -0.1117364177],[51.45111263799, -0.11085720432],[51.4515908469, -0.10928305705],[51.45186960281, -0.10872461594],[51.45287985141, -0.1072435574],[51.45250962706, -0.10603546935],[51.45255610972, -0.10557297063],[51.45275768788, -0.10524797912],[51.45275768788, -0.10524797912],[51.45312815057, -0.10480084562],[51.45301449735, -0.10444572472],[51.4527788991, -0.10377901086],[51.45262696932, -0.10328155155],[51.45261798271, -0.10328192402],[51.45261798271, -0.10328192402],[51.45262696932, -0.10328155155],[51.4527788991, -0.10377901086],[51.4534085713, -0.10323476215],[51.45327167763, -0.10311089755],[51.45311927938, -0.10258466823],[51.4529998926, -0.10243129416],[51.4530349077, -0.10237226971],[51.4530349077, -0.10237226971],[51.45330334155, -0.10228917217],[51.45330334155, -0.10228917217],[51.45342705829, -0.10215450237]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 1272,
+                    "isDisrupted": false,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 11,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Thameslink to Blackfriars",
+                        "detailed": "Thameslink towards Luton",
+                        "steps": []
+                    },
+                    "obstacles": [],
+                    "departureTime": "2017-03-06T09:22:00",
+                    "arrivalTime": "2017-03-06T09:33:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G01149L",
+                        "platformName": "",
+                        "icsCode": "1001149",
+                        "commonName": "Herne Hill Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.453427058289996,
+                        "lon": -0.10215450237
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00023BB",
+                        "platformName": "",
+                        "icsCode": "1000023",
+                        "commonName": "Blackfriars Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.51106122397,
+                        "lon": -0.10330544433
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.45341853741, -0.10218364225],[51.45389259273, -0.10258139006],[51.4546104488, -0.10304100683],[51.45552740458, -0.10357874906],[51.45599843083, -0.10378953184],[51.45643164911, -0.10388673197],[51.45695357008, -0.10390828636],[51.45777801079, -0.10373017441],[51.45853861405, -0.10349712231],[51.45998792589, -0.10303397485],[51.462168314, -0.10218057393],[51.46343123011, -0.10186904381],[51.46383562631, -0.10185226341],[51.46479006733, -0.10192783197],[51.46550256927, -0.1020566335],[51.46623211259, -0.10212714255],[51.46623211259, -0.10212714255],[51.46755616735, -0.1022593715],[51.4686504336, -0.10208438431],[51.47028612408, -0.1014693588],[51.47075891706, -0.10123375067],[51.47131072405, -0.10087966539],[51.47172726515, -0.10050239179],[51.47211614575, -0.10008306295],[51.47261765164, -0.09939985924],[51.47343356735, -0.09814198506],[51.47388277659, -0.09756171356],[51.47432579886, -0.09715448605],[51.47508007797, -0.09653269372],[51.47581801624, -0.09601236314],[51.47655875681, -0.09566470521],[51.47751657541, -0.09539439754],[51.4780198209, -0.09537343343],[51.47885580154, -0.09535300822],[51.47989870588, -0.09533836258],[51.48076351603, -0.0954319488],[51.48226800534, -0.09559970468],[51.48387939741, -0.09570540547],[51.48478015294, -0.0957975073],[51.48541154651, -0.09591523679],[51.48621602083, -0.09616979529],[51.4876125621, -0.09688943997],[51.48938735327, -0.09819837486],[51.49053225982, -0.09892859666],[51.49107518513, -0.09913649284],[51.4916526562, -0.09925652518],[51.49263195403, -0.09920138571],[51.49403583651, -0.09871080531],[51.49403583651, -0.09871080531],[51.49443812904, -0.09856441041],[51.49519112891, -0.09841782374],[51.49567710108, -0.09844081823],[51.4970555394, -0.09859955359],[51.4978526548, -0.09895537573],[51.49826148215, -0.09921210463],[51.49888901852, -0.09964703829],[51.49986130651, -0.10026935655],[51.50025052554, -0.10042606723],[51.50130824462, -0.10077111006],[51.50175254789, -0.10099758207],[51.50267896401, -0.10156423767],[51.50352123632, -0.10193268528],[51.50523250415, -0.10265410034],[51.50618633789, -0.1032485119],[51.50660274547, -0.10341854919],[51.50705346888, -0.10348629358],[51.50814982465, -0.10344076692],[51.50982038585, -0.10331374648],[51.51075381915, -0.10320292145],[51.51106029235, -0.10324783737]]",
+                        "stopPoints": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G01184A",
+                                "name": "Loughborough Junction Station",
+                                "uri": "/StopPoint/490G01184A",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "910GELPHNAC",
+                                "name": "Elephant & Castle Rail Station",
+                                "uri": "/StopPoint/910GELPHNAC",
+                                "type": "StopPoint"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                "id": "490G00023BB",
+                                "name": "Blackfriars Station",
+                                "uri": "/StopPoint/490G00023BB",
+                                "type": "StopPoint"
+                            }
+                        ],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "Thameslink",
+                            "directions": [
+                                "Luton Rail Station"
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "national-rail",
+                        "name": "national-rail",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "isDisrupted": false,
+                    "hasFixedLocations": true
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 14,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to 34 Park Street, Southwark",
+                        "detailed": "Walk to 34 Park Street, Southwark",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": " for 516 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "",
+                                "distance": 516,
+                                "cumulativeDistance": 516,
+                                "skyDirection": 446,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 461,
+                                "latitude": 51.508535313539994,
+                                "longitude": -0.10336711617,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Park Street, continue for 230 metres",
+                                "turnDirection": "SLIGHT_LEFT",
+                                "streetName": "Park Street",
+                                "distance": 230,
+                                "cumulativeDistance": 746,
+                                "skyDirection": 457,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 666,
+                                "latitude": 51.507339124779996,
+                                "longitude": -0.09724920589,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight left",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Obstacle, Tfl.Api.Presentation.Entities",
+                            "type": "LIFT",
+                            "incline": "DOWN",
+                            "stopId": 1000023,
+                            "position": "BEFORE"
+                        }
+                    ],
+                    "departureTime": "2017-03-06T09:33:00",
+                    "arrivalTime": "2017-03-06T09:47:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "naptanId": "490G00023BB",
+                        "platformName": "",
+                        "icsCode": "1000023",
+                        "commonName": "Blackfriars Station",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.51106122397,
+                        "lon": -0.10330544433
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+                        "commonName": "34 Park Street, Southwark",
+                        "placeType": "StopPoint",
+                        "lat": 51.50695401307,
+                        "lon": -0.0940229701
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.51106122397, -0.10330544433],[51.51098858862, -0.10437490411],[51.51080815986, -0.10433915977],[51.51076299447, -0.10432662331],[51.50981940954, -0.10436579163],[51.50857028256, -0.10441763974],[51.50840852508, -0.10442435361],[51.50852232394, -0.10423229236],[51.50844880224, -0.10413447012],[51.50845979075, -0.10370169619],[51.50852246356, -0.1036846833],[51.50853531354, -0.10336711617],[51.5085173405, -0.10336786257],[51.5085173405, -0.10336786257],[51.50853531354, -0.10336711617],[51.5085336833, -0.10326630955],[51.50853894322, -0.1030355212],[51.50855272329, -0.1027755576],[51.50855565229, -0.10240075966],[51.50857082914, -0.1022272015],[51.50862324676, -0.10157654418],[51.50852044845, -0.10022621929],[51.50825960655, -0.10022265911],[51.50827046614, -0.09922788008],[51.50828190344, -0.0988239088],[51.50827816812, -0.09859349557],[51.50830687565, -0.09814557319],[51.50773301933, -0.09769392757],[51.50739397825, -0.09730456169],[51.50739397825, -0.09730456169],[51.50733912478, -0.09724920589],[51.50727328828, -0.09651702693],[51.50720383795, -0.09611643553],[51.50713578916, -0.09580224803],[51.50703586889, -0.09518677713],[51.50701555699, -0.09504352273],[51.50704986555, -0.0949412206],[51.50695401307, -0.0940229701]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 746,
+                    "isDisrupted": false,
+                    "hasFixedLocations": false
+                }
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Journey, Tfl.Api.Presentation.Entities",
+            "startDateTime": "2017-03-06T08:47:00",
+            "duration": 109,
+            "arrivalDateTime": "2017-03-06T10:36:00",
+            "legs": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Leg, Tfl.Api.Presentation.Entities",
+                    "duration": 109,
+                    "instruction": {
+                        "$type": "Tfl.Api.Presentation.Entities.Instruction, Tfl.Api.Presentation.Entities",
+                        "summary": "Walk to 34 Park Street",
+                        "detailed": "Walk to 34 Park Street",
+                        "steps": [
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "Claverdale Road for 128 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Claverdale Road",
+                                "distance": 128,
+                                "cumulativeDistance": 128,
+                                "skyDirection": 422,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 114,
+                                "latitude": 51.44784248795,
+                                "longitude": -0.11496422766999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Tulse Hill, continue for 827 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Tulse Hill",
+                                "distance": 827,
+                                "cumulativeDistance": 955,
+                                "skyDirection": 361,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 849,
+                                "latitude": 51.44792094248999,
+                                "longitude": -0.1131332769,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Effra Road, continue for 679 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Effra Road",
+                                "distance": 679,
+                                "cumulativeDistance": 1634,
+                                "skyDirection": 345,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 1455,
+                                "latitude": 51.4552239384,
+                                "longitude": -0.11375334983999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Brixton Road, continue for 233 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Brixton Road",
+                                "distance": 233,
+                                "cumulativeDistance": 1867,
+                                "skyDirection": 380,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 1660,
+                                "latitude": 51.46119997495,
+                                "longitude": -0.11573829048999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 6 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "",
+                                "distance": 6,
+                                "cumulativeDistance": 1873,
+                                "skyDirection": 369,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 1665,
+                                "latitude": 51.46321823871,
+                                "longitude": -0.11486336115,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Brixton Road, continue for 2055 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Brixton Road",
+                                "distance": 2055,
+                                "cumulativeDistance": 3928,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 3496,
+                                "latitude": 51.463271927280005,
+                                "longitude": -0.11484675232,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 566 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "",
+                                "distance": 566,
+                                "cumulativeDistance": 4494,
+                                "skyDirection": 363,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 4003,
+                                "latitude": 51.48139146887,
+                                "longitude": -0.11090239739,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Kennington Park Road, continue for 632 metres",
+                                "turnDirection": "SLIGHT_RIGHT",
+                                "streetName": "Kennington Park Road",
+                                "distance": 632,
+                                "cumulativeDistance": 5126,
+                                "skyDirection": 394,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 4564,
+                                "latitude": 51.485901791,
+                                "longitude": -0.10842584004,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Newington Butts, continue for 74 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Newington Butts",
+                                "distance": 74,
+                                "cumulativeDistance": 5200,
+                                "skyDirection": 386,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 4629,
+                                "latitude": 51.490687960550005,
+                                "longitude": -0.10354612113,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Kennington Park Road, continue for 41 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Kennington Park Road",
+                                "distance": 41,
+                                "cumulativeDistance": 5241,
+                                "skyDirection": 385,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 4664,
+                                "latitude": 51.49127338901,
+                                "longitude": -0.10304645576,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Newington Butts, continue for 242 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Newington Butts",
+                                "distance": 242,
+                                "cumulativeDistance": 5483,
+                                "skyDirection": 396,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 4879,
+                                "latitude": 51.49158326029,
+                                "longitude": -0.10274548745,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 43 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "",
+                                "distance": 43,
+                                "cumulativeDistance": 5526,
+                                "skyDirection": 375,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 4917,
+                                "latitude": 51.49333113497,
+                                "longitude": -0.10072813081,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Elephant and Castle, continue for 120 metres",
+                                "turnDirection": "SLIGHT_LEFT",
+                                "streetName": "Elephant and Castle",
+                                "distance": 120,
+                                "cumulativeDistance": 5646,
+                                "skyDirection": 343,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5023,
+                                "latitude": 51.49369701779,
+                                "longitude": -0.10055445773999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Elephant & Castle, continue for 112 metres",
+                                "turnDirection": "SLIGHT_RIGHT",
+                                "streetName": "Elephant & Castle",
+                                "distance": 112,
+                                "cumulativeDistance": 5758,
+                                "skyDirection": 423,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5121,
+                                "latitude": 51.49477749982,
+                                "longitude": -0.10063919892999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Newington Causeway, continue for 460 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Newington Causeway",
+                                "distance": 460,
+                                "cumulativeDistance": 6218,
+                                "skyDirection": 360,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5533,
+                                "latitude": 51.49555046544,
+                                "longitude": -0.1000596195,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Borough High Street, continue for 250 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Borough High Street",
+                                "distance": 250,
+                                "cumulativeDistance": 6468,
+                                "skyDirection": 406,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5756,
+                                "latitude": 51.499105966909994,
+                                "longitude": -0.09694378339,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Lant Street, continue for 84 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Lant Street",
+                                "distance": 84,
+                                "cumulativeDistance": 6552,
+                                "skyDirection": 313,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5830,
+                                "latitude": 51.50059088321,
+                                "longitude": -0.09424523892,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Sanctuary Street, continue for 83 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Sanctuary Street",
+                                "distance": 83,
+                                "cumulativeDistance": 6635,
+                                "skyDirection": 391,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5903,
+                                "latitude": 51.5010471278,
+                                "longitude": -0.09520596787999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Marshalsea Road, continue for 42 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Marshalsea Road",
+                                "distance": 42,
+                                "cumulativeDistance": 6677,
+                                "skyDirection": 299,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 5940,
+                                "latitude": 51.50171292798,
+                                "longitude": -0.09467390897,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Redcross Way, continue for 342 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Redcross Way",
+                                "distance": 342,
+                                "cumulativeDistance": 7019,
+                                "skyDirection": 386,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6246,
+                                "latitude": 51.50191905111,
+                                "longitude": -0.09518401927999999,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Southwark Street, continue for 18 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Southwark Street",
+                                "distance": 18,
+                                "cumulativeDistance": 7037,
+                                "skyDirection": 273,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6262,
+                                "latitude": 51.50469929304,
+                                "longitude": -0.0930651685,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Thrale Street, continue for 40 metres",
+                                "turnDirection": "SLIGHT_RIGHT",
+                                "streetName": "Thrale Street",
+                                "distance": 40,
+                                "cumulativeDistance": 7077,
+                                "skyDirection": 300,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6298,
+                                "latitude": 51.50471249372,
+                                "longitude": -0.09332398712000001,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Take a slight right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "for 7 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "",
+                                "distance": 7,
+                                "cumulativeDistance": 7084,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6304,
+                                "latitude": 51.504900415899996,
+                                "longitude": -0.09382047467,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Maiden Road, continue for 109 metres",
+                                "turnDirection": "STRAIGHT",
+                                "streetName": "Maiden Road",
+                                "distance": 109,
+                                "cumulativeDistance": 7193,
+                                "skyDirection": 364,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6401,
+                                "latitude": 51.50496285313999,
+                                "longitude": -0.09378904997,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Continue along ",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Perkins Square, continue for 85 metres",
+                                "turnDirection": "LEFT",
+                                "streetName": "Perkins Square",
+                                "distance": 85,
+                                "cumulativeDistance": 7278,
+                                "skyDirection": 317,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6476,
+                                "latitude": 51.50589182869,
+                                "longitude": -0.0934044443,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn left",
+                                "trackType": "None"
+                            },
+                            {
+                                "$type": "Tfl.Api.Presentation.Entities.InstructionStep, Tfl.Api.Presentation.Entities",
+                                "description": "on to Porter Street, continue for 72 metres",
+                                "turnDirection": "RIGHT",
+                                "streetName": "Porter Street",
+                                "distance": 72,
+                                "cumulativeDistance": 7350,
+                                "skyDirection": 376,
+                                "skyDirectionDescription": "North",
+                                "cumulativeTravelTime": 6539,
+                                "latitude": 51.506338626390004,
+                                "longitude": -0.09433684939,
+                                "pathAttribute": {
+                                    "$type": "Tfl.Api.Presentation.Entities.PathAttribute, Tfl.Api.Presentation.Entities"
+                                },
+                                "descriptionHeading": "Turn right",
+                                "trackType": "None"
+                            }
+                        ]
+                    },
+                    "obstacles": [],
+                    "departureTime": "2017-03-06T08:47:00",
+                    "arrivalTime": "2017-03-06T10:36:00",
+                    "departurePoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                        "platformName": "",
+                        "icsCode": "99999997",
+                        "commonName": "Claverdale Road",
+                        "placeType": "StopPoint",
+                        "additionalProperties": [],
+                        "lat": 51.44784248795,
+                        "lon": -0.11496422766999999
+                    },
+                    "arrivalPoint": {
+                        "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+                        "commonName": "34 Park Street",
+                        "placeType": "StopPoint",
+                        "lat": 51.50695401307,
+                        "lon": -0.0940229701
+                    },
+                    "path": {
+                        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.Path, Tfl.Api.Presentation.Entities",
+                        "lineString": "[[51.44784248795, -0.11496422767],[51.44784248795, -0.11496422767],[51.44792094249, -0.1131332769],[51.44838801754, -0.11309962981],[51.44875623925, -0.11307005742],[51.44899841614, -0.11303128929],[51.45010192332, -0.11287065405],[51.45066048542, -0.11293397607],[51.45095889736, -0.11303681102],[51.45169973902, -0.11325093987],[51.45196174108, -0.11332649455],[51.45260257161, -0.11347279028],[51.45292447101, -0.11335876852],[51.45345144283, -0.11313553717],[51.45381044604, -0.11309194748],[51.45412683109, -0.11319404891],[51.45437984646, -0.11326997744],[51.45443422939, -0.11329652223],[51.4552239384, -0.11375334984],[51.45581223681, -0.11398819001],[51.45617447997, -0.11414598799],[51.45655423347, -0.11427427834],[51.4569342182, -0.11441695553],[51.45705173884, -0.11445529555],[51.45747665663, -0.11459612412],[51.45795595686, -0.11476350368],[51.45846244813, -0.11494416112],[51.45903230829, -0.11515100172],[51.45919429942, -0.11515872312],[51.45941182941, -0.11526492225],[51.45961092348, -0.11534309146],[51.46015382296, -0.11555105235],[51.46062390395, -0.11570443519],[51.46067805512, -0.11571660034],[51.46119997495, -0.11573829049],[51.4612979033, -0.11567667423],[51.46183340282, -0.11542428318],[51.46199423756, -0.1153600738],[51.46225300034, -0.11523424541],[51.46264610015, -0.11507408814],[51.46293228514, -0.11497591867],[51.46321823871, -0.11486336115],[51.46327192728, -0.11484675232],[51.46345925888, -0.114752654],[51.46381617991, -0.11457958275],[51.46395005414, -0.11451647869],[51.46406618641, -0.11446850215],[51.46460214562, -0.1142448553],[51.46472703299, -0.11418211962],[51.46478947665, -0.11415075164],[51.46510169484, -0.11399391046],[51.46530676747, -0.11388467616],[51.46592291061, -0.11361451772],[51.46600332737, -0.11358240686],[51.46624365156, -0.11342852272],[51.46634157849, -0.11336689447],[51.46728675207, -0.11286718471],[51.46799299034, -0.11260768001],[51.4688181389, -0.11247284187],[51.46918682233, -0.11247202416],[51.47011360323, -0.11250576637],[51.47041984348, -0.11253632295],[51.47076156694, -0.11253661808],[51.47117610994, -0.11259150297],[51.471437417, -0.1126239151],[51.47217617332, -0.11270861827],[51.47234761407, -0.11274474039],[51.47311217202, -0.11275638487],[51.47336379749, -0.11274600006],[51.4734893786, -0.11272641761],[51.47387580339, -0.11271046898],[51.4739207365, -0.11270861446],[51.47410945557, -0.11270082544],[51.47442375571, -0.11267345328],[51.47619203495, -0.11247086135],[51.47679321161, -0.11238844114],[51.47776214426, -0.11224763223],[51.47845156467, -0.1120607542],[51.47871078604, -0.11196364274],[51.47922946022, -0.11178380819],[51.47939904698, -0.11170479701],[51.47957762028, -0.11162541403],[51.47967577762, -0.11157815514],[51.48086931845, -0.11086636664],[51.4809137877, -0.11083572523],[51.48139146887, -0.11090239739],[51.48156198242, -0.11088094905],[51.48188967362, -0.11112664688],[51.4823058394, -0.11128227892],[51.48297705236, -0.11108171573],[51.48350743632, -0.11051249604],[51.48438272584, -0.10958332985],[51.48564830911, -0.10832110307],[51.485901791, -0.10842584004],[51.48611375362, -0.1081866115],[51.48706897313, -0.10719642074],[51.48777651155, -0.10646131983],[51.48828107433, -0.10596507609],[51.4884229993, -0.1058439603],[51.4889805483, -0.1052878881],[51.4895996044, -0.10464282351],[51.48990901467, -0.10431308708],[51.49045733658, -0.10374295545],[51.49068796055, -0.10354612113],[51.49119367442, -0.10312179045],[51.49127338901, -0.10304645576],[51.49140655705, -0.10294009142],[51.49158326029, -0.10274548745],[51.49183022496, -0.10244712714],[51.49205874977, -0.10212071854],[51.49226124611, -0.10185300977],[51.49240176825, -0.10164549536],[51.49248930306, -0.10149780336],[51.49269985204, -0.10117213213],[51.49298299176, -0.10088665805],[51.49333113497, -0.10072813081],[51.49353642615, -0.10063316269],[51.49369701779, -0.10055445774],[51.49378758262, -0.100593911],[51.49385970804, -0.10060531889],[51.49422885525, -0.10063319251],[51.49477749982, -0.10063919893],[51.49492257496, -0.10015775962],[51.49499283445, -0.10005399385],[51.49517093214, -0.09994574344],[51.4953598824, -0.09995229256],[51.49555046544, -0.1000596195],[51.49590093985, -0.10004504592],[51.49656104368, -0.09971505265],[51.49664098916, -0.09965410014],[51.49712019462, -0.09925958593],[51.49764176364, -0.09870482141],[51.49825156045, -0.09804551962],[51.49910596691, -0.09694378339],[51.49935081247, -0.09651575994],[51.49941231575, -0.09642675087],[51.49989301484, -0.09557106273],[51.50017263181, -0.09506953454],[51.50044279218, -0.09453957839],[51.50059088321, -0.09424523892],[51.5007386444, -0.09448401369],[51.5010471278, -0.09520596788],[51.50133900428, -0.0949056303],[51.5013924554, -0.09487458444],[51.50171292798, -0.09467390897],[51.5018729493, -0.095113899],[51.50191905111, -0.09518401928],[51.50217638489, -0.09497156805],[51.50225656157, -0.09492499845],[51.50240769447, -0.0948178346],[51.50265604104, -0.09460575381],[51.50313546195, -0.09422553262],[51.50373928793, -0.09375365709],[51.50469929304, -0.0930651685],[51.50471249372, -0.09332398712],[51.5049004159, -0.09382047467],[51.50496285314, -0.09378904997],[51.5056534074, -0.09367377179],[51.50589182869, -0.0934044443],[51.50611265386, -0.09371224342],[51.50627862327, -0.09396469495],[51.50633862639, -0.09433684939],[51.50695401307, -0.0940229701],[51.50695401307, -0.0940229701],[51.50695401307, -0.0940229701]]",
+                        "stopPoints": [],
+                        "elevation": []
+                    },
+                    "routeOptions": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.RouteOption, Tfl.Api.Presentation.Entities",
+                            "name": "",
+                            "directions": [
+                                ""
+                            ]
+                        }
+                    ],
+                    "mode": {
+                        "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                        "id": "walking",
+                        "name": "walking",
+                        "type": "Mode"
+                    },
+                    "disruptions": [],
+                    "plannedWorks": [],
+                    "distance": 7350,
+                    "isDisrupted": false,
+                    "hasFixedLocations": false
+                }
+            ]
+        }
+    ],
+    "lines": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "109",
+            "name": "109",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.64Z",
+            "modified": "2017-02-28T20:38:19.64Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=109&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "118",
+            "name": "118",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.593Z",
+            "modified": "2017-02-28T20:38:19.593Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=118&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "133",
+            "name": "133",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.563Z",
+            "modified": "2017-02-28T20:38:19.563Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "lineId": "133",
+                    "statusSeverity": 0,
+                    "statusSeverityDescription": "Special Service",
+                    "reason": "Route 133 is on diversion due to significant traffic delays at Bank Station from 0600 Monday 20th February until midnight Sunday 30th April. Buses at London Wall are diverting onto Wormwood Street, then turning right onto Bishopsgate, continuing along onto Gracechurch Street before rejoining usual line of route at King William Street. Diversion is in both directions.",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.ValidityPeriod, Tfl.Api.Presentation.Entities",
+                            "fromDate": "2017-03-06T06:00:00Z",
+                            "toDate": "2017-03-06T23:59:00Z",
+                            "isNow": true
+                        }
+                    ],
+                    "disruption": {
+                        "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                        "category": "RealTime",
+                        "categoryDescription": "RealTime",
+                        "description": "Route 133 is on diversion due to significant traffic delays at Bank Station from 0600 Monday 20th February until midnight Sunday 30th April. Buses at London Wall are diverting onto Wormwood Street, then turning right onto Bishopsgate, continuing along onto Gracechurch Street before rejoining usual line of route at King William Street. Diversion is in both directions.",
+                        "created": "2017-02-19T21:31:00Z",
+                        "affectedRoutes": [],
+                        "affectedStops": [],
+                        "isWholeLine": true
+                    }
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=133&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "2",
+            "name": "2",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.593Z",
+            "modified": "2017-02-28T20:38:19.593Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=2&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "250",
+            "name": "250",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.547Z",
+            "modified": "2017-02-28T20:38:19.547Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=250&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "333",
+            "name": "333",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.64Z",
+            "modified": "2017-02-28T20:38:19.64Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=333&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "415",
+            "name": "415",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.483Z",
+            "modified": "2017-02-28T20:38:19.483Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=415&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "432",
+            "name": "432",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.623Z",
+            "modified": "2017-02-28T20:38:19.623Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=432&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "45",
+            "name": "45",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.623Z",
+            "modified": "2017-02-28T20:38:19.623Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=45&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "59",
+            "name": "59",
+            "modeName": "bus",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.607Z",
+            "modified": "2017-02-28T20:38:19.607Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=59&serviceTypes=Regular"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "northern",
+            "name": "Northern",
+            "modeName": "tube",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.547Z",
+            "modified": "2017-02-28T20:38:19.547Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=Northern&serviceTypes=Regular"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Night",
+                    "uri": "/Line/Route?ids=Northern&serviceTypes=Night"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+            "id": "victoria",
+            "name": "Victoria",
+            "modeName": "tube",
+            "disruptions": [],
+            "created": "2017-02-28T20:38:19.593Z",
+            "modified": "2017-02-28T20:38:19.593Z",
+            "lineStatuses": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                    "id": 0,
+                    "statusSeverity": 10,
+                    "statusSeverityDescription": "Good Service",
+                    "created": "0001-01-01T00:00:00",
+                    "validityPeriods": []
+                }
+            ],
+            "routeSections": [],
+            "serviceTypes": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Regular",
+                    "uri": "/Line/Route?ids=Victoria&serviceTypes=Regular"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                    "name": "Night",
+                    "uri": "/Line/Route?ids=Victoria&serviceTypes=Night"
+                }
+            ],
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            }
+        }
+    ],
+    "stopMessages": [],
+    "recommendedMaxAgeMinutes": 5,
+    "searchCriteria": {
+        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.SearchCriteria, Tfl.Api.Presentation.Entities",
+        "dateTime": "2017-03-06T08:47:00",
+        "dateTimeType": "Departing",
+        "timeAdjustments": {
+            "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.TimeAdjustments, Tfl.Api.Presentation.Entities",
+            "earliest": {
+                "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.TimeAdjustment, Tfl.Api.Presentation.Entities",
+                "date": "20170306",
+                "time": "0300",
+                "timeIs": "departing",
+                "uri": "/journey/journeyresults/51.44790267944336,-0.11498010158538818/to/51.507205963134766,-0.09384889900684357?time=0300&date=20170306&timeIs=departing"
+            },
+            "earlier": {
+                "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.TimeAdjustment, Tfl.Api.Presentation.Entities",
+                "date": "20170306",
+                "time": "0846",
+                "timeIs": "departing",
+                "uri": "/journey/journeyresults/51.44790267944336,-0.11498010158538818/to/51.507205963134766,-0.09384889900684357?time=0846&date=20170306&timeIs=departing"
+            },
+            "later": {
+                "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.TimeAdjustment, Tfl.Api.Presentation.Entities",
+                "date": "20170306",
+                "time": "0859",
+                "timeIs": "departing",
+                "uri": "/journey/journeyresults/51.44790267944336,-0.11498010158538818/to/51.507205963134766,-0.09384889900684357?time=0859&date=20170306&timeIs=departing"
+            },
+            "latest": {
+                "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.TimeAdjustment, Tfl.Api.Presentation.Entities",
+                "date": "20170307",
+                "time": "0300",
+                "timeIs": "departing",
+                "uri": "/journey/journeyresults/51.44790267944336,-0.11498010158538818/to/51.507205963134766,-0.09384889900684357?time=0300&date=20170307&timeIs=departing"
+            }
+        }
+    },
+    "journeyVector": {
+        "$type": "Tfl.Api.Presentation.Entities.JourneyPlanner.JourneyVector, Tfl.Api.Presentation.Entities",
+        "from": "-0.11498010158538818:51.44790267944336:WGS84[DD.dddd]",
+        "to": "-0.09384889900684357:51.507205963134766:WGS84[DD.dddd]",
+        "via": "",
+        "uri": "/journey/journeyresults/51.44790267944336,-0.11498010158538818/to/51.507205963134766,-0.09384889900684357?time=0847"
+    }
+}

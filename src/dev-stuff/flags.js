@@ -1,3 +1,4 @@
 export default {
-    fakeGoogleStuff: true
+    fakeGoogleStuff: true,
+    fakeTflStuff: true
 }

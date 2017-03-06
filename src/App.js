@@ -8,7 +8,7 @@ import TflJourneyPlan from './tfl/TflJourneyPlan'
 
 export default class App extends React.Component {
 
-	constructor () {
+	constructor() {
 		super();
 		this.state = {
 			bikeRides: [],
@@ -16,41 +16,50 @@ export default class App extends React.Component {
 		};
 	}
 
-	componentDidMount () {
+	componentDidMount() {
 		initGoogleApi()
 			.then(() => console.log('google API initialised'));
 	}
 
-	handleGetBikeRidesSubmit(e) {
-		e.preventDefault();
-		const fromDate = e.target.querySelector('.js-from-date').value
-		const toDate = e.target.querySelector('.js-to-date').value
-		this.signInToGoogleAndGetSomeBikeRides(fromDate, toDate);
+	addUnfetchedJourneyPlans(bikeRides) {
+		return bikeRides.map(bikeRide => Object.assign({}, bikeRide, {
+			journeyPlan: new TflJourneyPlan(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime)
+		}))
 	}
 
-	signInToGoogleAndGetSomeBikeRides (fromDate, toDate) {
-		this.setState({status: 'loading'});
+	startFetchingJourneyPlans(journeyPlans) {
+		journeyPlans.forEach(journeyPlan => {
+			journeyPlan.fetchPlan()
+				.then(() => {
+					this.forceUpdate();
+				});
+		})
+	}
+
+
+	handleGetBikeRidesSubmit(e) {
+		e.preventDefault();
+
+		this.setState({ status: 'loading' });
+
+		const fromDate = new Date(e.target.querySelector('.js-from-date').value);
+		const toDate = new Date(e.target.querySelector('.js-to-date').value);
+
 		return signInToGoogle()
-			.then(() => getBikeRides(new Date(fromDate), new Date(toDate)))
-			.then(bikeRides => bikeRides.map(bikeRide => Object.assign({}, bikeRide, {
-				journeyPlan: new TflJourneyPlan(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime)
-			})))
+			.then(() => getBikeRides(fromDate, toDate))
 			.then(bikeRides => this.setState({
 				status: 'loaded',
 				bikeRides
 			}))
 			.then(() => {
-				this.state.bikeRides.forEach(bikeRide => bikeRide.journeyPlan.fetchPlan().then(() => bikeRide)
-						.then(bikeRide => {
-							this.forceUpdate();
-							return bikeRide.journeyPlan.fetchCosts();
-						})
-						.then(() => this.forceUpdate())
-				)
+				this.setState({
+					bikeRides: this.addUnfetchedJourneyPlans(this.state.bikeRides)
+				})
+				this.startFetchingJourneyPlans(this.state.bikeRides.map(br => br.journeyPlan))
 			});
 	}
 
-	renderBikeRides () {
+	renderBikeRides() {
 
 		let bikeBit;
 		switch (this.state.status) {
@@ -58,7 +67,7 @@ export default class App extends React.Component {
 				bikeBit = 'Loading...';
 				break;
 			case 'loaded':
-				bikeBit = <BikeRideList items={this.state.bikeRides}/>;
+				bikeBit = <BikeRideList items={this.state.bikeRides} />;
 				break;
 			default:
 				bikeBit = '';
@@ -71,7 +80,7 @@ export default class App extends React.Component {
 		);
 	}
 
-	render () {
+	render() {
 		return (
 			<div>
 				<h1>CycleSave</h1>
@@ -79,10 +88,10 @@ export default class App extends React.Component {
 				<p>Let me take a peek at your Google Fit stuff to see what's up</p>
 				<form onSubmit={this.handleGetBikeRidesSubmit.bind(this)}>
 					<label for='fromDate'>From</label>
-					<input id='fromDate' type='date' className='js-from-date'/>
+					<input id='fromDate' type='date' className='js-from-date' />
 					<label for='toDate'>To</label>
-					<input id='toDate' type='date' className='js-to-date'/>
-					<input type='submit' value='Get bike rides'/>
+					<input id='toDate' type='date' className='js-to-date' />
+					<input type='submit' value='Get bike rides' />
 				</form>
 				{this.renderBikeRides()}
 				<p>Disclaimer: All this stuff remains between you and Google. I'm not saving any your info anywhere, all

@@ -1,4 +1,7 @@
 import { fetchJourneyPlan } from '../api-clients/tfl-client'
+import flags from '../dev-stuff/flags';
+import fakePlan from '../dev-stuff/fixtures/tfl-journey-plan';
+
 import TflJourney from './TflJourney';
 
 export default class TflJourneyPlan {
@@ -9,8 +12,17 @@ export default class TflJourneyPlan {
 		this.isFetched = false;
 	}
 
+	makePlanRequest () {
+		if(flags.fakeTflStuff) {
+			console.log('faking TFL stuff');
+			return Promise.resolve(fakePlan);
+		} else {
+			return fetchJourneyPlan(this.start, this.end, this.startTime)
+		}
+	}
+
 	fetchPlan () {
-		return fetchJourneyPlan(this.start, this.end, this.startTime)
+		return this.makePlanRequest()
 			.then(stuff => {
 				this.isFetched = true;
 				this.rawJourneys = stuff.journeys;
