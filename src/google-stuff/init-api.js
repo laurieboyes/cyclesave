@@ -1,5 +1,7 @@
 /* global gapi */
 
+import flags from '../dev-stuff/flags';
+
 const client_id = '447838384773-9n5pf96vipeuedm8ls2und2uu0ekteqt.apps.googleusercontent.com';
 const apiKey = 'SqgxaJRRDVB4s3x9zEbkaR4B';
 
@@ -26,7 +28,14 @@ function initApi () {
 }
 
 // do this immediately so that log in is sync and Google login pop up isn't blocked
-export default () => loadAuth2()
-	.then(setApiKey)
-	.then(initApi)
-	.catch(console.error);
+export default () => {
+	if (flags.fakeGoogleStuff) {
+		console.log('faking google API init');
+		return Promise.resolve();
+	} else {
+		return loadAuth2()
+			.then(setApiKey)
+			.then(initApi)
+			.catch(console.error);
+	}
+}

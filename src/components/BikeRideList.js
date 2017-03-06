@@ -40,9 +40,7 @@ export default class BikeRideList extends React.Component {
 
 	renderJourneyTable (journeyPlan) {
 
-		//{JSON.stringify(journey.legs)}
-
-		if (journeyPlan.isFetched) {
+		if (journeyPlan && journeyPlan.isFetched) {
 			return (
 				<table className='bike-ride-list__table__journey-table'>
 					<tbody>
