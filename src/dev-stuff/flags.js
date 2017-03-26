@@ -3,4 +3,5 @@ export default {
     fakeTflJourneyPlan: true,
     fakeTflTubeAndOvergroundFare: true,
     fakeTransportApiStationCodes: true,
+    fakeNationalRailFare: true,
 }
