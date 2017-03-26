@@ -3,11 +3,11 @@ import { getStationCodeFromLatLng } from '../api-clients/transport-api-client'
 import { fetchNationalRailFare } from '../api-clients/br-fares-client'
 import deepCopy from '../util/deep-copy'
 
-function getLegCost (leg) {
+function getLegCost(leg) {
 	switch (leg.type) {
 		case 'tube':
 		case 'overground':
-			return fetchTubeAndOvergroundFare(leg.fromNaptanId, leg.toNaptanId);
+			return fetchTubeAndOvergroundFare(leg.fromNaptanId, leg.toNaptanId)
 		case 'national-rail':
 			return Promise.all([
 				getStationCodeFromLatLng(leg.fromLat, leg.fromLng),
@@ -18,16 +18,20 @@ function getLegCost (leg) {
 		case 'walking':
 			return Promise.resolve(0);
 		default:
-			return Promise.reject(new Error('Cannot cost leg ' + JSON.stringify(leg)));
+			return Promise.reject(new Error('Uncostable leg type ' + JSON.stringify(leg)));
 	}
 }
 
-function getTotalCost (legs) {
-	return Promise.all(legs.map(leg => getLegCost(leg)))
-		.then(legCosts => legCosts.reduce((total, cost) => total + cost, 0));
+function sumArray(arr) {
+	return arr.reduce((total, n) => total + n, 0)
 }
 
-function mergeMergeableLegs (legs) {
+function getTotalCost(legs) {
+	return Promise.all(legs.map(leg => getLegCost(leg)))
+		.then(legCosts => sumArray(legCosts));
+}
+
+function mergeMergeableLegs(legs) {
 	return legs.reduce((legStack, leg) => {
 		const lastType = legStack.length && [...legStack].pop().type;
 
@@ -53,7 +57,7 @@ function mergeMergeableLegs (legs) {
 							return legStack.concat(leg);
 						}
 					} else if (prevLeg.type !== 'walking') {
-						return legStack.concat(Object.assign({}, leg, {hopperApplied: true}));
+						return legStack.concat(Object.assign({}, leg, { hopperApplied: true }));
 					}
 					prevLeg = stackCopy.pop();
 				}
@@ -64,5 +68,6 @@ function mergeMergeableLegs (legs) {
 }
 
 export default (journeyLegs) => {
-	return getTotalCost(mergeMergeableLegs(journeyLegs));
+	const mergedLegs = mergeMergeableLegs(journeyLegs);
+	return getTotalCost(mergedLegs);
 }

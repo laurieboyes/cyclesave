@@ -27,13 +27,33 @@ export default class App extends React.Component {
 		}))
 	}
 
-	startFetchingJourneyPlans(journeyPlans) {
-		journeyPlans.forEach(journeyPlan => {
-			journeyPlan.fetchPlan()
+	// This gets all the journey plans for all the journeys all at once
+	// Think the TFL API is pretty forgiving but maybe experiment and batch with directly
+	fetchJourneyPlans(journeyPlans) {
+		console.log('fetching journey plans', journeyPlans);
+		return Promise.all(journeyPlans.map(journeyPlan => {
+			return journeyPlan.fetchPlan()
+				.then(() => {
+					this.forceUpdate();
+				})
+				.catch(err => {
+					console.log(err);
+				})
+		})).then(() => {
+			console.log('finished fetching journey plans');
+		});
+	}
+
+	fetchCosts(journeyPlans) {
+		console.log('fetching journey costs');
+		// todo definitely need to directly this - batch it up. Try one at a time and see how we go
+		// Maybe have loading bar
+		return Promise.all(journeyPlans.map(journeyPlan => {
+			return journeyPlan.fetchCosts()
 				.then(() => {
 					this.forceUpdate();
 				});
-		})
+		}))
 	}
 
 
@@ -55,7 +75,10 @@ export default class App extends React.Component {
 				this.setState({
 					bikeRides: this.addUnfetchedJourneyPlans(this.state.bikeRides)
 				})
-				this.startFetchingJourneyPlans(this.state.bikeRides.map(br => br.journeyPlan))
+				return this.fetchJourneyPlans(this.state.bikeRides.map(br => br.journeyPlan))
+			})
+			.then(() => {
+				return this.fetchCosts(this.state.bikeRides.map(br => br.journeyPlan))
 			});
 	}
 

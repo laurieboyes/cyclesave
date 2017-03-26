@@ -13,8 +13,8 @@ export default class TflJourneyPlan {
 	}
 
 	makePlanRequest () {
-		if(flags.fakeTflStuff) {
-			console.log('faking TFL stuff');
+		if(flags.fakeTflJourneyPlan) {
+			console.log('faking TFL journey plans');
 			return Promise.resolve(fakePlan);
 		} else {
 			return fetchJourneyPlan(this.start, this.end, this.startTime)
@@ -27,6 +27,8 @@ export default class TflJourneyPlan {
 				this.isFetched = true;
 				this.rawJourneys = stuff.journeys;
 				this.journeys = stuff.journeys.map(rawJourney => new TflJourney(rawJourney));
+
+				// todo can we here filter out the unlikely journeys?
 			})
 			.catch(err => {
 				console.error(err);
@@ -39,6 +41,7 @@ export default class TflJourneyPlan {
 		if(this.inError) {
 			return [];
 		} else {
+			// fetch costs for all possible journeys
 			return Promise.all(this.journeys.map(j => j.fetchCost()));
 		}
 	}
