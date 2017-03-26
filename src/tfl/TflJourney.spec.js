@@ -45,3 +45,17 @@ describe('Making a TflJourney from the raw data', () => {
 	})
 });
 
+describe('Getting some bonus info from the journey plans', () => {
+
+	it('Returns a presentable name for the start location when requested', () => {
+		const journey = new TflJourney(rawJourneyFixture);
+		expect(journey.getStartLocationNiceName()).toBe('20 Perry Vale, Forest Hill');
+	});
+
+	it('Returns a presentable name for the end location when requested', () => {
+		const journey = new TflJourney(rawJourneyFixture);
+		expect(journey.getEndLocationNiceName()).toBe('Claverdale Road, Tulse Hill');
+	});
+
+});
+

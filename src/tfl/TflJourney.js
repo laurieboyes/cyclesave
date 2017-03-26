@@ -30,6 +30,9 @@ export default class TflJourney {
 				getTypeSpecificInfo(rawLeg)
 			)
 		);
+
+		this.startLocationNiceName = rawJourney.legs[0].departurePoint.commonName;
+		this.endLocationNiceName = rawJourney.legs[rawJourney.legs.length - 1].arrivalPoint.commonName;
 	}
 
 	getLegSummaries () {
@@ -48,4 +51,13 @@ export default class TflJourney {
 				this.cost = 'uncostable';
 			});
 	}
+	
+	getStartLocationNiceName() {
+		return this.startLocationNiceName;
+	}
+
+	getEndLocationNiceName() {
+		return this.endLocationNiceName;
+	}
+	
 }

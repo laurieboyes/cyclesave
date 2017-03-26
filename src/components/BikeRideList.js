@@ -3,23 +3,27 @@ import moment from 'moment';
 
 export default class BikeRideList extends React.Component {
 
-	getBikeRideKey (ride) {
+	getBikeRideKey(ride) {
 		return ride.startTime.toISOString();
 	}
 
-	renderLocation (lat, lng) {
+	renderLocationLatLng(lat, lng) {
 		return (<a href={`https://www.google.co.uk/maps/place/${lat},${lng}`}>{lat.toFixed(3)},{lng.toFixed(3)}</a>);
 	}
 
-	nanosToMinutesString (nanos) {
+	renderLocationNiceName(niceName, lat, lng) {
+		return (<a href={`https://www.google.co.uk/maps/place/${lat},${lng}`}>{niceName}</a>);
+	}
+
+	nanosToMinutesString(nanos) {
 		return `${parseInt(nanos / 1000 / 60)} mins`
 	}
 
-	formatStartTime (date) {
+	formatStartTime(date) {
 		return moment(date).format('YYYY-MM-DD HH:mm');
 	}
 
-	formatJourneyLegSummaries (legSummaries) {
+	formatJourneyLegSummaries(legSummaries) {
 		return (
 			<ol>
 				{legSummaries.map((s, i) => (<li key={i}>{s}</li>))}
@@ -28,28 +32,28 @@ export default class BikeRideList extends React.Component {
 
 	}
 
-	renderJourneyCost (cost) {
-		if(typeof cost === 'undefined') {
+	renderJourneyCost(cost) {
+		if (typeof cost === 'undefined') {
 			return 'loading cost...'
-		} else if(cost === 'uncostable') {
+		} else if (cost === 'uncostable') {
 			return cost;
 		} else {
 			return '£' + cost.toFixed(2);
 		}
 	}
 
-	renderJourneyTable (journeyPlan) {
+	renderJourneyTable(journeyPlan) {
 
 		if (journeyPlan && journeyPlan.isFetched) {
 			return (
 				<table className='bike-ride-list__table__journey-table'>
 					<tbody>
-					{journeyPlan.getJourneys().map((journey, i) => (
-						<tr key={i}>
-							<td>{this.formatJourneyLegSummaries(journey.getLegSummaries())}</td>
-							<td>{this.renderJourneyCost(journey.cost)}</td>
-						</tr>
-					))}
+						{journeyPlan.getJourneys().map((journey, i) => (
+							<tr key={i}>
+								<td>{this.formatJourneyLegSummaries(journey.getLegSummaries())}</td>
+								<td>{this.renderJourneyCost(journey.cost)}</td>
+							</tr>
+						))}
 					</tbody>
 				</table>
 			);
@@ -58,30 +62,42 @@ export default class BikeRideList extends React.Component {
 		}
 	}
 
-	render () {
+	renderRideSummary(ride) {
+		if (ride.journeyPlan && !ride.journeyPlan.isFetched) {
+			return (
+				<span>Fetching info for journey from
+					&nbsp;{this.renderLocationLatLng(ride.startLatLang.lat, ride.startLatLang.lng)}
+					&nbsp;to
+					&nbsp;{this.renderLocationLatLng(ride.endLatLang.lat, ride.endLatLang.lng)}
+					&nbsp;at
+					&nbsp;{this.formatStartTime(ride.startTime)}...
+				</span>)
+		} else if (ride.journeyPlan && ride.journeyPlan.isFetched) {
+			const journey = ride.journeyPlan.getAssumedJourney();
+			const start = journey.getStartLocationNiceName();
+			const end = journey.getEndLocationNiceName();
+
+			return (<span>
+				From {this.renderLocationNiceName(start)}
+				&nbsp;to {this.renderLocationNiceName(end)}
+				&nbsp;at some time (TODO)</span>)
+		}
+	}
+
+	render() {
 		return (
 			<div className='bike-ride-list'>
 				<h2>Here's your bike rides:</h2>
 				<table className='bike-ride-list__table'>
-					<thead>
-					<tr>
-						<th>Start loc</th>
-						<th>End loc</th>
-						<th>Start time</th>
-						<th>Duration</th>
-					</tr>
-					</thead>
 					{this.props.items.map(ride => {
 						return (
 							<tbody key={this.getBikeRideKey(ride)}>
 								<tr>
-									<td>{this.renderLocation(ride.startLatLang.lat, ride.startLatLang.lng)}</td>
-									<td>{this.renderLocation(ride.endLatLang.lat, ride.endLatLang.lng)}</td>
-									<td>{this.formatStartTime(ride.startTime)}</td>
-									<td>{this.nanosToMinutesString(ride.durationMs)}</td>
+									<td>{this.renderRideSummary(ride)}</td>
+									<td>££££</td>
 								</tr>
 								<tr>
-									<td colSpan='4'>
+									<td colSpan='2'>
 										{this.renderJourneyTable(ride.journeyPlan)}
 									</td>
 								</tr>

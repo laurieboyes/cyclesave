@@ -53,4 +53,9 @@ export default class TflJourneyPlan {
 			return this.journeys;
 		}
 	}
+	
+	getAssumedJourney() {
+		//todo balance of cost and convenience??
+		return this.journeys[0];
+	}
 }
