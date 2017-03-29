@@ -77,10 +77,16 @@ export default class BikeRideList extends React.Component {
 			const start = journey.getStartLocationNiceName();
 			const end = journey.getEndLocationNiceName();
 
+			const startMoment = moment(ride.startTime);
+			const timeOfDay = startMoment.hour() < 12 ? 'morning' : (startMoment.hour() < 17 ? 'afternoon' : 'evening');
+			const niceDate = startMoment.format('Do MMM YYYY');
+			const dateTime = startMoment.format();
+			const dateTimeTitle = startMoment.format('YYYY-MM-DD HH:mm');
+
 			return (<span>
 				From {this.renderLocationNiceName(start)}
 				&nbsp;to {this.renderLocationNiceName(end)}
-				&nbsp;at some time (TODO)</span>)
+				&nbsp;<time dateTime={dateTime} title={dateTimeTitle}>on {niceDate} in the {timeOfDay}</time></span>)
 		}
 	}
 
