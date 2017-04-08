@@ -111,9 +111,9 @@ export default class App extends React.Component {
 				<p>Let me take a peek at your Google Fit stuff to see what's up</p>
 				<form onSubmit={this.handleGetBikeRidesSubmit.bind(this)}>
 					<label for='fromDate'>From</label>
-					<input id='fromDate' type='date' className='js-from-date' />
+					<input id='fromDate' type='date' className='js-from-date' value={new Date(0).toISOString().substring(0, 10)}/>
 					<label for='toDate'>To</label>
-					<input id='toDate' type='date' className='js-to-date' />
+					<input id='toDate' type='date' className='js-to-date' value={new Date().toISOString().substring(0, 10)} />
 					<input type='submit' value='Get bike rides' />
 				</form>
 				{this.renderBikeRides()}
