@@ -5,3 +5,7 @@
 .bike-ride-list__table__journey-table {
 	width: 50%;
 }
+
+.util-hidden {
+	display: none;
+}

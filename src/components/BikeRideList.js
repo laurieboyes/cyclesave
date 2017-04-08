@@ -98,6 +98,11 @@ export default class BikeRideList extends React.Component {
 		}
 	}
 
+	expandDeets(e) {
+		const deets = e.target.closest('.js-ride-container').querySelector('.js-ride-details');
+		deets.style.display = deets.classList.toggle('util-hidden');
+	}
+
 	render() {
 		return (
 			<div className='bike-ride-list'>
@@ -105,12 +110,13 @@ export default class BikeRideList extends React.Component {
 				<table className='bike-ride-list__table'>
 					{this.props.items.map(ride => {
 						return (
-							<tbody key={this.getBikeRideKey(ride)}>
+							<tbody className="js-ride-container" key={this.getBikeRideKey(ride)}>
 								<tr>
 									<td>{this.renderRideSummary(ride)}</td>
 									<td>{this.renderRideCost(ride)}</td>
+									<td><button onClick={this.expandDeets}>See deets</button></td>
 								</tr>
-								<tr>
+								<tr className="js-ride-details util-hidden">
 									<td colSpan='2'>
 										{this.renderJourneyTable(ride.journeyPlan)}
 									</td>
