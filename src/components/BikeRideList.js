@@ -42,23 +42,24 @@ export default class BikeRideList extends React.Component {
 		}
 	}
 
-	renderJourneyTable(journeyPlan) {
-
-		if (journeyPlan && journeyPlan.isFetched) {
-			return (
-				<table className='bike-ride-list__table__journey-table'>
-					<tbody>
-						{journeyPlan.getJourneys().map((journey, i) => (
-							<tr key={i}>
-								<td>{this.formatJourneyLegSummaries(journey.getLegSummaries())}</td>
-								<td>{this.renderJourneyCost(journey.cost)}</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
-			);
-		} else {
-			return 'loading...'
+	renderJourneyTable(ride) {
+		if (ride.showDeets) {
+			if (ride.journeyPlan && ride.journeyPlan.isFetched) {
+				return (
+					<table className='bike-ride-list__table__journey-table'>
+						<tbody>
+							{ride.journeyPlan.getJourneys().map((journey, i) => (
+								<tr key={i}>
+									<td>{this.formatJourneyLegSummaries(journey.getLegSummaries())}</td>
+									<td>{this.renderJourneyCost(journey.cost)}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				);
+			} else {
+				return 'loading...'
+			}
 		}
 	}
 
@@ -98,9 +99,10 @@ export default class BikeRideList extends React.Component {
 		}
 	}
 
-	expandDeets(e) {
-		const deets = e.target.closest('.js-ride-container').querySelector('.js-ride-details');
-		deets.style.display = deets.classList.toggle('util-hidden');
+	expandDeets(ride) {
+		// lol bad react
+		ride.showDeets = !ride.showDeets;
+		this.forceUpdate();
 	}
 
 	render() {
@@ -114,11 +116,11 @@ export default class BikeRideList extends React.Component {
 								<tr>
 									<td>{this.renderRideSummary(ride)}</td>
 									<td>{this.renderRideCost(ride)}</td>
-									<td><button onClick={this.expandDeets}>See deets</button></td>
+									<td><button onClick={() => this.expandDeets(ride)}>See deets</button></td>
 								</tr>
-								<tr className="js-ride-details util-hidden">
+								<tr className="js-ride-details">
 									<td colSpan='2'>
-										{this.renderJourneyTable(ride.journeyPlan)}
+										{this.renderJourneyTable(ride)}
 									</td>
 								</tr>
 							</tbody>
