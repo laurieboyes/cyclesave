@@ -74,8 +74,8 @@ export default class BikeRideList extends React.Component {
 				</span>)
 		} else if (ride.journeyPlan && ride.journeyPlan.isFetched) {
 			const journey = ride.journeyPlan.getAssumedJourney();
-			const start = journey.getStartLocationNiceName();
-			const end = journey.getEndLocationNiceName();
+			const startNiceName = journey.getStartLocationNiceName();
+			const endNiceName = journey.getEndLocationNiceName();
 
 			const startMoment = moment(ride.startTime);
 			const timeOfDay = startMoment.hour() < 12 ? 'morning' : (startMoment.hour() < 17 ? 'afternoon' : 'evening');
@@ -84,8 +84,8 @@ export default class BikeRideList extends React.Component {
 			const dateTimeTitle = startMoment.format('YYYY-MM-DD HH:mm');
 
 			return (<span>
-				From {this.renderLocationNiceName(start)}
-				&nbsp;to {this.renderLocationNiceName(end)}
+				From {this.renderLocationNiceName(startNiceName, ride.startLatLang.lat, ride.startLatLang.lng)}
+				&nbsp;to {this.renderLocationNiceName(endNiceName, ride.endLatLang.lat, ride.endLatLang.lng)}
 				&nbsp;<time dateTime={dateTime} title={dateTimeTitle}>on {niceDate} in the {timeOfDay}</time></span>)
 		}
 	}
