@@ -12,7 +12,8 @@ export default class App extends React.Component {
 		super();
 		this.state = {
 			bikeRides: [],
-			status: ''
+			status: '',
+			prettyStatus: 'Ready to go'
 		};
 	}
 
@@ -65,20 +66,37 @@ export default class App extends React.Component {
 		const fromDate = new Date(e.target.querySelector('.js-from-date').value);
 		const toDate = new Date(e.target.querySelector('.js-to-date').value);
 
+		this.setState({ prettyStatus: 'Signing into Google' });
+
 		return signInToGoogle()
-			.then(() => getBikeRides(fromDate, toDate))
+			.then(() => {
+				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit' });
+				return getBikeRides(fromDate, toDate);
+			})
 			.then(bikeRides => this.setState({
 				status: 'loaded',
-				bikeRides
+				bikeRides,
+				prettyStatus: 'Got bikerides from Google fit'
 			}))
 			.then(() => {
 				this.setState({
-					bikeRides: this.addUnfetchedJourneyPlans(this.state.bikeRides)
+					bikeRides: this.addUnfetchedJourneyPlans(this.state.bikeRides),
+					prettyStatus: 'Fetching TFL journey plans for all bikerides'
 				})
-				return this.fetchJourneyPlans(this.state.bikeRides.map(br => br.journeyPlan))
+				return new Promise(resolve => {
+					//do this so we get the status update
+					setImmediate(() => {
+						resolve(this.fetchJourneyPlans(this.state.bikeRides.map(br => br.journeyPlan)));
+					})
+				})
+				
 			})
 			.then(() => {
+				this.setState({ prettyStatus: 'Fetching costs for all potential journeys' });
 				return this.fetchCosts(this.state.bikeRides.map(br => br.journeyPlan))
+			})
+			.then(() => {
+				this.setState({ prettyStatus: 'All done' });
 			});
 	}
 
@@ -109,6 +127,7 @@ export default class App extends React.Component {
 				<h1>CycleSave</h1>
 
 				<p>Let me take a peek at your Google Fit stuff to see what's up</p>
+				<p>Status: {this.state.prettyStatus}</p>
 				<form onSubmit={this.handleGetBikeRidesSubmit.bind(this)}>
 					<label for='fromDate'>From</label>
 					<input id='fromDate' type='date' className='js-from-date' value={new Date(0).toISOString().substring(0, 10)}/>
