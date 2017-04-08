@@ -90,6 +90,14 @@ export default class BikeRideList extends React.Component {
 		}
 	}
 
+	renderRideCost(ride) {
+		if (ride.journeyPlan && ride.journeyPlan.isFetched && ride.journeyPlan.getAssumedJourney().cost) {
+			return `£${ride.journeyPlan.getAssumedJourney().cost.toFixed(2)}`;
+		} else {
+			return '\u2026';
+		}
+	}
+
 	render() {
 		return (
 			<div className='bike-ride-list'>
@@ -100,7 +108,7 @@ export default class BikeRideList extends React.Component {
 							<tbody key={this.getBikeRideKey(ride)}>
 								<tr>
 									<td>{this.renderRideSummary(ride)}</td>
-									<td>££££</td>
+									<td>{this.renderRideCost(ride)}</td>
 								</tr>
 								<tr>
 									<td colSpan='2'>
