@@ -20,6 +20,10 @@ export default class App extends React.Component {
 	componentDidMount() {
 		initGoogleApi()
 			.then(() => console.log('google API initialised'));
+
+		//seems like setting value on a react date input means I can't change it?
+		document.querySelector('.js-from-date').value = new Date(0).toISOString().substring(0, 10);
+		document.querySelector('.js-to-date').value = new Date().toISOString().substring(0, 10);
 	}
 
 	addUnfetchedJourneyPlans(bikeRides) {
@@ -68,9 +72,9 @@ export default class App extends React.Component {
 
 		this.setState({ prettyStatus: 'Signing into Google' });
 
-		return signInToGoogle()
+				return signInToGoogle()
 			.then(() => {
-				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit' });
+				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit (this may take a minute)'});
 				return getBikeRides(fromDate, toDate);
 			})
 			.then(bikeRides => this.setState({
@@ -89,7 +93,7 @@ export default class App extends React.Component {
 						resolve(this.fetchJourneyPlans(this.state.bikeRides.map(br => br.journeyPlan)));
 					})
 				})
-				
+
 			})
 			.then(() => {
 				this.setState({ prettyStatus: 'Fetching costs for all potential journeys' });
@@ -130,9 +134,9 @@ export default class App extends React.Component {
 				<p>Status: {this.state.prettyStatus}</p>
 				<form onSubmit={this.handleGetBikeRidesSubmit.bind(this)}>
 					<label for='fromDate'>From</label>
-					<input id='fromDate' type='date' className='js-from-date' value={new Date(0).toISOString().substring(0, 10)}/>
+					<input id='fromDate' type='date' className='js-from-date' />
 					<label for='toDate'>To</label>
-					<input id='toDate' type='date' className='js-to-date' value={new Date().toISOString().substring(0, 10)} />
+					<input id='toDate' type='date' className='js-to-date' />
 					<input type='submit' value='Get bike rides' />
 				</form>
 				{this.renderBikeRides()}
