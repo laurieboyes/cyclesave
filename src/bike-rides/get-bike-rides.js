@@ -1,11 +1,12 @@
 import flags from '../dev-stuff/flags';
-import fakeBikeRides from '../dev-stuff/fixtures/bike-rides';
+import fakeOneBikeRide from '../dev-stuff/fixtures/one-bike-ride';
+import fakeLoadsOfBikeRides from '../dev-stuff/fixtures/loads-of-bike-rides';
 
 import fuzzyFindIndex from '../util/number-array-fuzzy-find-index';
 import dataSources from '../google-stuff/data-sources';
 import { queryFitnessDataSource } from '../google-stuff/queries'
 
-function getClosestLatLng (locationPoints, nanos) {
+function getClosestLatLng(locationPoints, nanos) {
 	const sortedPoints = locationPoints.sort();
 	const closestLocation = sortedPoints[fuzzyFindIndex(sortedPoints.map(l => l.startTimeNanos), nanos)];
 	return {
@@ -16,9 +17,12 @@ function getClosestLatLng (locationPoints, nanos) {
 
 export default (fromDate, toDate) => {
 
-	if(flags.fakeGoogleStuff) {
-		console.log('faking bike rides');
-		return Promise.resolve(fakeBikeRides);
+	if (flags.fakeLoadsOfGoogleStuff) {
+		console.log('faking loads of bike rides');
+		return Promise.resolve(fakeLoadsOfBikeRides);
+	} else if (flags.fakeGoogleStuff) {
+		console.log('faking one bike ride');
+		return Promise.resolve(fakeOneBikeRide);
 	}
 
 	return Promise.all([
@@ -27,7 +31,7 @@ export default (fromDate, toDate) => {
 	].map(d => queryFitnessDataSource(d, fromDate, toDate)))
 		.then(([activities, locationPoints]) => {
 
-			if(!activities) {
+			if (!activities) {
 				throw new Error('No activities found in the given range');
 			}
 

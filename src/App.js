@@ -77,6 +77,10 @@ export default class App extends React.Component {
 				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit (this may take a minute)'});
 				return getBikeRides(fromDate, toDate);
 			})
+			.then(bikeRides => {
+				console.log('bikeRides', bikeRides)
+				return bikeRides;
+			})
 			.then(bikeRides => this.setState({
 				status: 'loaded',
 				bikeRides,

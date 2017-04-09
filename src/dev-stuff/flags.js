@@ -1,5 +1,6 @@
 export default {
-    // fakeGoogleStuff: true,
+    fakeGoogleStuff: true,
+    fakeLoadsOfGoogleStuff: true,
     fakeTflJourneyPlan: true,
     fakeTflTubeAndOvergroundFare: true,
     fakeTransportApiStationCodes: true,
