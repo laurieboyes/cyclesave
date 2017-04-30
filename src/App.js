@@ -1,10 +1,14 @@
 import React from 'react';
 import initGoogleApi from './google-stuff/init-api';
 import signInToGoogle from './google-stuff/sign-in';
-import getBikeRides from './bike-rides/get-bike-rides';
+import getBikeRides from 'get-google-fit-bike-rides';
 import './App.css';
 import BikeRideList from './components/BikeRideList.js'
 import TflJourneyPlan from './tfl/TflJourneyPlan'
+
+import flags from './dev-stuff/flags';
+import fakeOneBikeRide from './dev-stuff/fixtures/one-bike-ride';
+import fakeLoadsOfBikeRides from './dev-stuff/fixtures/loads-of-bike-rides';
 
 export default class App extends React.Component {
 
@@ -75,6 +79,15 @@ export default class App extends React.Component {
 				return signInToGoogle()
 			.then(() => {
 				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit (this may take a minute)'});
+
+				if (flags.fakeLoadsOfGoogleStuff) {
+					console.log('faking loads of bike rides');
+					return Promise.resolve(fakeLoadsOfBikeRides);
+				} else if (flags.fakeGoogleStuff) {
+					console.log('faking one bike ride');
+					return Promise.resolve(fakeOneBikeRide);
+				}
+
 				return getBikeRides(fromDate, toDate);
 			})
 			.then(bikeRides => {
