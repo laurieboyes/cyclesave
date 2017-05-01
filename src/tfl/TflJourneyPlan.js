@@ -39,7 +39,7 @@ export default class TflJourneyPlan {
 
 	fetchCosts () {
 		if(this.inError) {
-			return [];
+			return Promise.resolve([]);
 		} else {
 			// fetch costs for all possible journeys
 			return Promise.all(this.journeys.map(j => j.fetchCost()));
@@ -56,6 +56,6 @@ export default class TflJourneyPlan {
 	
 	getAssumedJourney() {
 		//todo balance of cost and convenience??
-		return this.journeys[0];
+		return this.journeys ? this.journeys[0] : TflJourney.getNullJourney();
 	}
 }

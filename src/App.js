@@ -5,6 +5,7 @@ import getBikeRides from 'get-google-fit-bike-rides';
 import './App.css';
 import BikeRideList from './components/BikeRideList.js'
 import TflJourneyPlan from './tfl/TflJourneyPlan'
+import directly from 'directly';
 
 import flags from './dev-stuff/flags';
 import fakeOneBikeRide from './dev-stuff/fixtures/one-bike-ride';
@@ -40,8 +41,8 @@ export default class App extends React.Component {
 	// Think the TFL API is pretty forgiving but maybe experiment and batch with directly
 	fetchJourneyPlans(journeyPlans) {
 		console.log('fetching journey plans', journeyPlans);
-		return Promise.all(journeyPlans.map(journeyPlan => {
-			return journeyPlan.fetchPlan()
+		return directly(1, journeyPlans.map(journeyPlan => {
+			return () => journeyPlan.fetchPlan()
 				.then(() => {
 					this.forceUpdate();
 				})
@@ -150,10 +151,10 @@ export default class App extends React.Component {
 				<p>Let me take a peek at your Google Fit stuff to see what's up</p>
 				<p>Status: {this.state.prettyStatus}</p>
 				<form onSubmit={this.handleGetBikeRidesSubmit.bind(this)}>
-					<label for='fromDate'>From</label>
-					<input id='fromDate' type='date' className='js-from-date' />
-					<label for='toDate'>To</label>
-					<input id='toDate' type='date' className='js-to-date' />
+					<label for='fromDate'>From</label>&nbsp;
+					<input id='fromDate' type='date' className='js-from-date' />&nbsp;
+					<label for='toDate'>To</label>&nbsp;
+					<input id='toDate' type='date' className='js-to-date' />&nbsp;
 					<input type='submit' value='Get bike rides' />
 				</form>
 				{this.renderBikeRides()}

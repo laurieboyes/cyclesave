@@ -59,5 +59,14 @@ export default class TflJourney {
 	getEndLocationNiceName() {
 		return this.endLocationNiceName;
 	}
+
+	static getNullJourney() {
+		return {
+			fetchCost: () => Promise.resolve('TFL prob'),
+			getLegSummaries: () => [],
+			getStartLocationNiceName: () => 'TFL says ???',
+			getEndLocationNiceName: () => 'TFL says ???',
+		}
+	}
 	
 }
