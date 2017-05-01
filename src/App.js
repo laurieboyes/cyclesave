@@ -3,9 +3,12 @@ import initGoogleApi from './google-stuff/init-api';
 import signInToGoogle from './google-stuff/sign-in';
 import getBikeRides from 'get-google-fit-bike-rides';
 import './App.css';
-import BikeRideList from './components/BikeRideList.js'
+import BikeRideList from './components/BikeRideList'
 import TflJourneyPlan from './tfl/TflJourneyPlan'
 import directly from 'directly';
+import tap from './util/tap';
+import getDistanceMetres from './util/get-distance-metres';
+import centralLondonLatLng from './util/central-london-lat-lng';
 
 import flags from './dev-stuff/flags';
 import fakeOneBikeRide from './dev-stuff/fixtures/one-bike-ride';
@@ -22,7 +25,7 @@ export default class App extends React.Component {
 		};
 	}
 
-	componentDidMount() {
+	componentDidMount () {
 		initGoogleApi()
 			.then(() => console.log('google API initialised'));
 
@@ -31,7 +34,7 @@ export default class App extends React.Component {
 		document.querySelector('.js-to-date').value = new Date().toISOString().substring(0, 10);
 	}
 
-	addUnfetchedJourneyPlans(bikeRides) {
+	addUnfetchedJourneyPlans (bikeRides) {
 		return bikeRides.map(bikeRide => Object.assign({}, bikeRide, {
 			journeyPlan: new TflJourneyPlan(bikeRide.startLatLang, bikeRide.endLatLang, bikeRide.startTime)
 		}))
@@ -39,7 +42,7 @@ export default class App extends React.Component {
 
 	// This gets all the journey plans for all the journeys all at once
 	// Think the TFL API is pretty forgiving but maybe experiment and batch with directly
-	fetchJourneyPlans(journeyPlans) {
+	fetchJourneyPlans (journeyPlans) {
 		console.log('fetching journey plans', journeyPlans);
 		return directly(1, journeyPlans.map(journeyPlan => {
 			return () => journeyPlan.fetchPlan()
@@ -54,7 +57,7 @@ export default class App extends React.Component {
 		});
 	}
 
-	fetchCosts(journeyPlans) {
+	fetchCosts (journeyPlans) {
 		console.log('fetching journey costs');
 		// todo definitely need to directly this - batch it up. Try one at a time and see how we go
 		// Maybe have loading bar
@@ -67,7 +70,7 @@ export default class App extends React.Component {
 	}
 
 
-	handleGetBikeRidesSubmit(e) {
+	handleGetBikeRidesSubmit (e) {
 		e.preventDefault();
 
 		this.setState({ status: 'loading' });
@@ -77,9 +80,9 @@ export default class App extends React.Component {
 
 		this.setState({ prettyStatus: 'Signing into Google' });
 
-				return signInToGoogle()
+		return signInToGoogle()
 			.then(() => {
-				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit (this may take a minute)'});
+				this.setState({ prettyStatus: 'Fetching bikeride stuff from Google Fit (this may take a minute)' });
 
 				if (flags.fakeLoadsOfGoogleStuff) {
 					console.log('faking loads of bike rides');
@@ -91,18 +94,23 @@ export default class App extends React.Component {
 
 				return getBikeRides(fromDate, toDate);
 			})
-			.then(bikeRides => {
+			.then(tap(bikeRides => {
 				console.log('bikeRides', bikeRides)
-				return bikeRides;
-			})
-			.then(bikeRides => this.setState({
-				status: 'loaded',
-				bikeRides,
-				prettyStatus: 'Got bikerides from Google fit'
 			}))
-			.then(() => {
+			.then(bikeRides => bikeRides
+
+				// assume any journey shorter than 100 metres is bogus
+				// todo move me into get-bike-rides?
+				.filter(bikeRide => getDistanceMetres(bikeRide.startLatLang, bikeRide.endLatLang) > 100)
+
+				// assume any journey that starts or ends more than 40km (???) from London is outside of TFL planning range
+				.filter(bikeRide => getDistanceMetres(centralLondonLatLng, bikeRide.startLatLang) < 1000 * 40)
+				.filter(bikeRide => getDistanceMetres(centralLondonLatLng, bikeRide.endLatLang) < 1000 * 40)
+			)
+			.then(bikeRides => {
 				this.setState({
-					bikeRides: this.addUnfetchedJourneyPlans(this.state.bikeRides),
+					status: 'loaded',
+					bikeRides: this.addUnfetchedJourneyPlans(bikeRides),
 					prettyStatus: 'Fetching TFL journey plans for all bikerides'
 				})
 				return new Promise(resolve => {
@@ -122,8 +130,7 @@ export default class App extends React.Component {
 			});
 	}
 
-	renderBikeRides() {
-
+	renderBikeRides () {
 		let bikeBit;
 		switch (this.state.status) {
 			case 'loading':
@@ -143,7 +150,7 @@ export default class App extends React.Component {
 		);
 	}
 
-	render() {
+	render () {
 		return (
 			<div>
 				<h1>CycleSave</h1>
